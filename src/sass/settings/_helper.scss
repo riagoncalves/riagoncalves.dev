@@ -1,0 +1,23 @@
+/* Text Settings */
+
+h1, h2, p {
+  font-family: 'Arial';
+  color: $white;
+}
+
+h1 {
+  font-size: 54px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.tal {
+  text-align: left;
+}
+
+.tar {
+  text-align: right;
+}
