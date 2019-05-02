@@ -1,10 +1,10 @@
-/* Base */
-@import 'base/reset';
-@import 'base/page';
-
 /* Tools */
 @import 'tools/mixins';
 @import 'tools/variables';
+
+/* Base */
+@import 'base/reset';
+@import 'base/page';
 
 /* Settings */
 @import 'settings/fonts';
