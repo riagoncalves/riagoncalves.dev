@@ -8,6 +8,18 @@
   flex-direction: column;
 }
 
+.justc-c {
+  justify-content: center;
+}
+
+.justc-end {
+  justify-content: flex-end;
+}
+
+.align-c {
+  align-items: center;
+}
+
 /* Text Settings */
 
 h1, h2, p {
@@ -17,11 +29,15 @@ h1, h2, p {
 
 h1 {
   font-size: 54px;
-  font-weight: 800;
+  font-weight: $bold;
 }
 
 h2 {
   font-size: 40px;
+}
+
+p {
+  font-size: 18px;
 }
 
 .tal {
@@ -30,4 +46,8 @@ h2 {
 
 .tar {
   text-align: right;
+}
+
+.tac {
+  text-align: center;
 }

@@ -1,11 +1,7 @@
 
 main {
   .s-1 {
-    display: flex;
-    padding-top: 17vw;
-    padding-bottom: 18vw;
-    align-items: center;
-    justify-content: flex-end;
+    height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/lisbon.jpg');
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -17,11 +13,17 @@ main {
   }
 
   .skills {
+    padding-top: 20px;
 
     object {
       width: 100%;
-      max-width: 25vw;
+      max-width: 200px;
       padding: 25px;
+      transition: 200ms all;
+
+     &:hover {
+       transform: scale(1.2);
+     } 
     }
   }
 }
