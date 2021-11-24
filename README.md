@@ -2,10 +2,8 @@
 
 ### How do I get set up? ###
 
-* Run `npm install` or `yarn install` to install node_modules
+* Run `yarn install` to install node_modules
 
-* To start developing run `gulp watch`
+* To start developing run `yarn start`
 
-* To deploy run `gulp`
-
-
+* To deploy run `yarn build`

@@ -17,7 +17,8 @@ main {
     }
   }
 
-  .ig-profile {
+  .profile-picture {
+    max-width: 150px;
     border: 1px solid $black;
     border-radius: 50%;
     transition: 200ms all;
@@ -42,13 +43,16 @@ main {
       display: block;
     }
   }
+
   .skills {
-    padding-top: 20px;
+    max-width: 750px;
+    margin: 0 auto;
+    padding-top: 50px;
 
     object {
       width: 100%;
-      max-width: 150px;
-      padding: 25px;
+      max-width: 80px;
+      padding: 15px;
       transition: 200ms all;
 
      &:hover {
@@ -58,8 +62,9 @@ main {
   }
 
   .projects {
-    padding-top: 20px;
+    padding-top: 50px;
     flex-wrap: wrap;
+    align-items: flex-start;
 
     li {
       max-width: 33.333%;
@@ -84,6 +89,29 @@ main {
      &:hover {
        transform: scale(1.1);
      } 
+    }
+
+    &-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
+
+      a {
+        cursor: pointer;
+        transition: 200ms all;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      object {
+        width: 100%;
+        max-width: 40px;
+        padding: 0 10px;
+        pointer-events: none; 
+      }
     }
   }
 }
