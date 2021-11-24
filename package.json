@@ -38,6 +38,6 @@
   },
   "scripts": {
     "start": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp"
   }
 }
