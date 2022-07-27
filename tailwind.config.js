@@ -5,10 +5,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      'main': ['Arial', 'sans-seriff'],
-    },
     extend: {
+      fontFamily: {
+        'main': ['Arial', 'sans-seriff'],
+      },
+      maxWidth: {
+        '1/2': '50%',
+        '1/3': '33.333%',
+      },
       backgroundImage: {
         'hero-pattern': "linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('/images/lisbon.jpg')",
       },

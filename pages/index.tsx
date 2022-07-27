@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+
+
 
 const Home: NextPage = () => {
   return (
@@ -26,66 +27,81 @@ const Home: NextPage = () => {
 
       <main>
         <section className="relative h-screen bg-no-repeat bg-center bg-cover flex items-center justify-end bg-hero-pattern">
-          <div className="max-w-screen-2xl w-full mx-auto text-right">
+          <div className="max-w-screen-2xl w-full mx-auto text-right px-8 2xl:px-0">
             <Image src="/images/profile_pic.jpg"
                    width={150}
                    height={150}
                    alt="Profile Picture"
-                   className="transition-transform ease-in-out duration-200 hover:scale-110 border border-solid border-black rounded-full" />
+                   className="transition-scale border border-solid border-black rounded-full" />
             <h1>Ricardo Gonçalves</h1>
             <h2>Web Developer based in Lisbon</h2>
           </div>
           <div className="absolute w-screen h-1/5-screen bottom-0 left-0 bg-gradient-to-b from-transparent to-main"></div>
         </section>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <section className="s-2 pb-20">
+          <div className="max-w-screen-2xl w-full mx-auto text-center">
+            <h1>Projects</h1>
+            <ul className="flex justify-center flex-wrap items-start pt-12">
+              <li className='px-5 max-w-full md:max-w-1/2 lg:max-w-1/3'>
+                <div className='relative w-80 m-4 min-h-[180px] transition-scale'>
+                  <Image layout='fill' objectFit="contain" src="/images/bot.jpg" alt="Bot" />
+                </div>
+                <p>Discord Bot</p>
+                <div className="flex justify-center items-center pt-2.5">
+                  <a href="http://shinobubot.com/" target="_blank" rel="noreferrer" className='transition-scale'>
+                    <object data="/images/website.svg" type="image/svg+xml" className='w-full px-2.5 pointer-events-none max-w-[40px]'>
+                      Website
+                    </object>
+                  </a>
+                  <a href="https://github.com/riagoncalves/shinobu" target="_blank" rel="noreferrer" className='transition-scale'>
+                    <object data="/images/github.svg" type="image/svg+xml" className='w-full px-2.5 pointer-events-none max-w-[40px]'>
+                      Github
+                    </object>
+                  </a>
+                </div>
+              </li>
+              <li className='px-5 max-w-full md:max-w-1/2 lg:max-w-1/3'>
+                <div className='relative w-80 m-4 min-h-[180px] transition-scale'>
+                  <Image layout='fill' objectFit="contain" src="/images/sarcastify.jpg" alt="Sarcastify" />
+                </div>
+                <p>Sarcastify Website</p>
+                <div className="flex justify-center items-center pt-2.5">
+                  <a href="https://sarcastify.riagoncalves.dev/" target="_blank" rel="noreferrer" className='transition-scale'>
+                    <object data="/images/website.svg" type="image/svg+xml" className='w-full px-2.5 pointer-events-none max-w-[40px]'>
+                      Website
+                    </object>
+                  </a>
+                  <a href="https://github.com/riagoncalves/sarcastify" target="_blank" rel="noreferrer" className='transition-scale'>
+                    <object data="/images/github.svg" type="image/svg+xml" className='w-full px-2.5 pointer-events-none max-w-[40px]'>
+                      Github
+                    </object>
+                  </a>
+                </div>
+              </li>
+              <li className='px-5 max-w-full md:max-w-1/2 lg:max-w-1/3'>
+                <div className='relative w-80 m-4 min-h-[180px] transition-scale'>
+                  <Image  layout='fill' objectFit="contain" src="/images/transfer.jpg" alt="Transfer" />
+                </div>
+                <p>Website Transfer Theme</p>
+                <div className="flex justify-center items-center pt-2.5">
+                  <a href="https://transfer-template.netlify.app/" target="_blank" rel="noreferrer" className='transition-scale'>
+                    <object data="/images/website.svg" type="image/svg+xml" className='w-full px-2.5 pointer-events-none max-w-[40px]'>
+                      Website
+                    </object>
+                  </a>
+                  <a href="https://github.com/riagoncalves/transfer-website-theme" target="_blank" rel="noreferrer" className='transition-scale'>
+                    <object data="/images/github.svg" type="image/svg+xml" className='w-full px-2.5 pointer-events-none max-w-[40px]'>
+                      Github
+                    </object>
+                  </a>
+                </div>
+              </li>
+            </ul>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+          </div>
+      </section>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/images/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
