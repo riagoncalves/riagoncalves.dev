@@ -6,7 +6,7 @@
 
 <h1 align="center">riagoncalves.dev</h1>
 <p align="center">
-  A powerful discord assistant.
+  Personal website.
 </p>
 
 <p align="center">
