@@ -11,6 +11,10 @@ body {
   @apply w-full p-0 m-0 bg-main;
 }
 
+main {
+  @apply overflow-hidden;
+}
+
 main, section {
   @apply w-full;
 }
