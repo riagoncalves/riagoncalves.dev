@@ -1,0 +1,70 @@
+[
+  {
+    "key": "html",
+    "name": "HTML"
+  },
+  {
+    "key": "css",
+    "name": "CSS"
+  },
+  {
+    "key": "sass",
+    "name": "Sass"
+  },
+  {
+    "key": "js",
+    "name": "JavaScript"
+  },
+  {
+    "key": "ruby",
+    "name": "Ruby"
+  },
+  {
+    "key": "rails",
+    "name": "Ruby On Rails"
+  },
+  {
+    "key": "express",
+    "name": "Express"
+  },
+  {
+    "key": "react",
+    "name": "React"
+  },
+  {
+    "key": "gatsby",
+    "name": "Gatsby"
+  },
+  {
+    "key": "next",
+    "name": "NextJs"
+  },
+  {
+    "key": "webpack",
+    "name": "Webpack"
+  },
+  {
+    "key": "kotlin",
+    "name": "Kotlin"
+  },
+  {
+    "key": "java",
+    "name": "Java"
+  },
+  {
+    "key": "sequelize",
+    "name": "Sequelize"
+  },
+  {
+    "key": "postgresql",
+    "name": "Postgresql"
+  },
+  {
+    "key": "wordpress",
+    "name": "Wordpress"
+  },
+  {
+    "key": "git",
+    "name": "Git"
+  }
+]

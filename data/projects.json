@@ -1,0 +1,20 @@
+[
+  {
+    "key": "bot",
+    "name": "Discord Bot",
+    "website": "http://shinobubot.com/",
+    "github": "https://github.com/riagoncalves/shinobu"
+  },
+  {
+    "key": "sarcastify",
+    "name": "Sarcastify Website",
+    "website": "https://sarcastify.riagoncalves.dev/",
+    "github": "https://github.com/riagoncalves/sarcastify"
+  },
+  {
+    "key": "transfer",
+    "name": "Website Transfer Theme",
+    "website": "https://transfer-template.netlify.app/",
+    "github": "https://github.com/riagoncalves/transfer-website-theme"
+  }
+]
