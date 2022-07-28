@@ -1,9 +1,38 @@
-# README #
+<p align="center">
+  <a href="https://riagoncalves.dev/">
+    <img width="122" alt="riagoncalves.dev" src="public/images/favicon.ico">
+  </a>
+</p>
 
-### How do I get set up? ###
+<h1 align="center">riagoncalves.dev</h1>
+<p align="center">
+  Personal website.
+</p>
 
-* Run `yarn install` to install node_modules
+<p align="center">
+  <a href="https://riagoncalves.dev/"><img alt="Netlify" src="https://api.netlify.com/api/v1/badges/1da2c2d6-bcab-401b-b3d5-2a67997676dd/deploy-status"></a>
+  <a href="https://www.codefactor.io/repository/github/riagoncalves/riagoncalves.dev"><img src="https://www.codefactor.io/repository/github/riagoncalves/riagoncalves.dev/badge" alt="CodeFactor" /></a>
+</p>
 
-* To start developing run `yarn start`
+## Installation
 
-* To deploy run `yarn build`
+### Requirements
+
+-   Node v12.22.0 or higher
+
+### Getting Started
+
+-   Clone this repo and run `yarn install`
+-   Create your environment variables file named `.env`
+-   Fill in with your env variables
+-   Run `yarn dev` for a development build or `yarn build` and `yarn start` for a production build
+
+## Links
+
+- [Website](https://riagoncalves.dev/)
+- [GitHub](https://github.com/riagoncalves/riagoncalves.dev)
+- [Trello](https://trello.com/b/Vj3TE5WM/riagoncalvesdev)
+
+## License
+
+[MIT](LICENSE)

@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  @apply w-full p-0 m-0 bg-main;
+}
+
+main, section {
+  @apply w-full;
+}
+
+section {
+  @apply py-12;
+}
+
+h1, h2, p {
+  @apply font-main text-white;
+}
+
+h1 {
+  @apply text-5xl font-extrabold;
+}
+
+h2 {
+  @apply text-4xl;
+}
+
+p {
+  @apply text-lg;
+}
+
+.transition-scale {
+  @apply transition-transform ease-in-out duration-200 hover:scale-110;
+}
