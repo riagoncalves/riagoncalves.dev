@@ -65,8 +65,10 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
                     alt="Profile Picture"
                     className="border border-solid border-black rounded-full" />
             </div>
-            <h1>Ricardo Gonçalves</h1>
-            <h2>Web Developer based in Lisbon</h2>
+            <h1 className='py-4'>Ricardo Gonçalves</h1>
+            <h2>
+              Web Developer based in <a href="https://www.google.com/maps/place/Portugal/@37.2219056,-18.8269796,5z/data=!3m1!4b1!4m5!3m4!1s0xb32242dbf4226d5:0x2ab84b091c4ef041!8m2!3d39.399872!4d-8.224454" target="_blank" rel="noreferrer" className='hover:italic'>Portugal</a>
+            </h2>
           </div>
           <div className="absolute w-screen h-1/5-screen bottom-0 left-0 bg-gradient-to-b from-transparent to-main"></div>
         </section>
