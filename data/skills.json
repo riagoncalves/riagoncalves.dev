@@ -16,6 +16,10 @@
     "name": "JavaScript"
   },
   {
+    "key": "typescript",
+    "name": "TypeScript"
+  },
+  {
     "key": "ruby",
     "name": "Ruby"
   },
