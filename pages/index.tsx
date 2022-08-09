@@ -54,29 +54,45 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
         <link rel='icon' href='/images/favicon.ico' />
       </Head>
 
+      <header className='py-6'>
+        <nav className='max-w-screen-2xl w-full mx-auto px-8 2xl:px-0'>
+          <ul className='flex items-center'>
+            <li className='flex-1'>
+              <a href="#">
+                <div className='relative w-10 h-10 transition-scale'>
+                  <Image layout='fill' objectFit='contain' src="/images/logo-white.svg" alt="riagoncalves" />
+                </div>
+              </a>
+            </li>
+            <li className='pl-8'>
+              <a href="" className='font-main font-bold text-white text-lmd'>
+                Projects
+              </a>
+            </li>
+            <li className='pl-8'>
+              <a href="" className='font-main font-bold text-white text-lmd'>
+                Skills
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
       <main>
-        <section className='relative h-screen bg-no-repeat bg-center bg-cover flex items-center justify-end bg-hero-pattern'>
-          <div className='max-w-screen-2xl w-full mx-auto text-right px-8 2xl:px-0'>
-            <div className='transition-scale w-36 h-36 relative ml-auto mr-0'>
-              <Image
-                src='/images/profile_pic.jpg'
-                layout='fill'
-                objectFit='contain'
-                alt='Profile Picture'
-                className='border border-solid border-black rounded-full'
-              />
+        <section className='relative h-screen bg-no-repeat bg-center bg-cover flex items-center justify-end'>
+          <div className='max-w-screen-2xl w-full mx-auto px-8 2xl:px-0'>
+            <div className='inline-block typewriter'>
+              <h1 className='py-4'>Ricardo Gonçalves</h1>
             </div>
-            <h1 className='py-4'>Ricardo Gonçalves</h1>
-            <h2>
+            <p className='italic'>
               Web Developer based in <a href='https://www.google.com/maps/place/Portugal/@37.2219056,-18.8269796,5z/data=!3m1!4b1!4m5!3m4!1s0xb32242dbf4226d5:0x2ab84b091c4ef041!8m2!3d39.399872!4d-8.224454' target='_blank' rel='noreferrer' className='hover:italic'>Portugal</a>
-            </h2>
+            </p>
           </div>
-          <div className='absolute w-screen h-1/5-screen bottom-0 left-0 bg-gradient-to-b from-transparent to-main' />
         </section>
 
         <section className='pb-20'>
           <div className='max-w-screen-2xl w-full mx-auto text-center'>
-            <h1>Projects</h1>
+            <h2>Projects</h2>
             <ul className='flex justify-center flex-wrap items-start pt-12'>
               {projects.map((project, index) => (
                 <li key={index} className='px-5 max-w-full md:max-w-1/2 lg:max-w-1/3'>
@@ -108,7 +124,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
 
         <section className='pb-0'>
           <div className='max-w-screen-2xl w-full mx-auto text-center after:mt-32 after:h-[3px] after:block after:bg-divider'>
-            <h1>Skills</h1>
+            <h2>Skills</h2>
             <ul className='max-w-3xl pt-12 m-auto flex justify-center items-center flex-wrap'>
               {skills.map((skill, index) => (
                 <li key={index}>

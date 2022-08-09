@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        main: ['Arial', 'sans-seriff']
+        main: ['Montserrat', 'sans-seriff']
       },
       maxWidth: {
         '1/2': '50%',
