@@ -50,9 +50,9 @@ p {
   color: #fff;
   font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
+  border-right: .15rem solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  letter-spacing: .15em; /* Adjust as needed */
+  letter-spacing: .15rem; /* Adjust as needed */
   animation: 
     typing 1.5s steps(17, end),
     blink-caret .5s step-end infinite;

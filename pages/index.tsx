@@ -54,23 +54,23 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
         <link rel='icon' href='/images/favicon.ico' />
       </Head>
 
-      <header className='py-6'>
+      <header className='py-6 fixed top-0 w-100'>
         <nav className='max-w-screen-2xl w-full mx-auto px-8 2xl:px-0'>
           <ul className='flex items-center'>
             <li className='flex-1'>
-              <a href="#">
+              <a href='#'>
                 <div className='relative w-10 h-10 transition-scale'>
-                  <Image layout='fill' objectFit='contain' src="/images/logo-white.svg" alt="riagoncalves" />
+                  <Image layout='fill' objectFit='contain' src='/images/logo-white.svg' alt='riagoncalves' />
                 </div>
               </a>
             </li>
             <li className='pl-8'>
-              <a href="" className='font-main font-bold text-white text-lmd'>
+              <a href='' className='font-main font-bold text-white text-lmd'>
                 Projects
               </a>
             </li>
             <li className='pl-8'>
-              <a href="" className='font-main font-bold text-white text-lmd'>
+              <a href='' className='font-main font-bold text-white text-lmd'>
                 Skills
               </a>
             </li>
@@ -85,7 +85,9 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
               <h1 className='py-4'>Ricardo Gonçalves</h1>
             </div>
             <p className='italic'>
-              Web Developer based in <a href='https://www.google.com/maps/place/Portugal/@37.2219056,-18.8269796,5z/data=!3m1!4b1!4m5!3m4!1s0xb32242dbf4226d5:0x2ab84b091c4ef041!8m2!3d39.399872!4d-8.224454' target='_blank' rel='noreferrer' className='hover:italic'>Portugal</a>
+              <a href='https://www.google.com/maps/place/Portugal/@37.2219056,-18.8269796,5z/data=!3m1!4b1!4m5!3m4!1s0xb32242dbf4226d5:0x2ab84b091c4ef041!8m2!3d39.399872!4d-8.224454' target='_blank' rel='noreferrer' className='hover:italic'>
+                Web Developer based in Portugal
+              </a>
             </p>
           </div>
         </section>
