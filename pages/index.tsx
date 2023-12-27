@@ -99,7 +99,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
               {projects.map((project, index) => (
                 <li key={index} className='px-5 max-w-full md:max-w-1/2 lg:max-w-1/3'>
                   <div className='relative w-80 m-4 min-h-[180px] transition-scale'>
-                    <Image layout='fill' objectFit='contain' src={`/images/${project.key}.jpg`} alt={project.key} />
+                    <img src={`/images/${project.key}.jpg`} alt={project.key} />
                   </div>
                   <p>{project.name}</p>
                   <div className='flex justify-center items-center pt-2.5'>

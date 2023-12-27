@@ -19,7 +19,7 @@
 
 ### Requirements
 
--   Node v12.22.0 or higher
+-   Node v18.19.0 or higher
 
 ### Getting Started
 
