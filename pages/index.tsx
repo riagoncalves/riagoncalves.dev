@@ -6,12 +6,16 @@ import Projects from '../data/projects.json'
 import Skills from '../data/skills.json'
 import Contacts from '../data/contacts.json'
 
+import ProjectListItem from '../components/ProjectListItem'
+import SkillListItem from '../components/SkillListItem'
+import ContactListItem from '../components/ContactListItem'
+
 interface HomePageProps {
   projects: Array<{
     key: string
     name: string
-    website?: string
-    github?: string
+    website: string | null
+    github: string | null
   }>
   skills: Array<{
     key: string
@@ -20,10 +24,11 @@ interface HomePageProps {
   contacts: Array<{
     key: string
     link: string
+    active: boolean
   }>
 }
 
-export async function getStaticProps (): Promise<{props: HomePageProps }> {
+export async function getStaticProps (): Promise<{ props: HomePageProps }> {
   return {
     props: {
       projects: Projects,
@@ -97,28 +102,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
             <h2>Projects</h2>
             <ul className='flex justify-center flex-wrap items-start pt-12'>
               {projects.map((project, index) => (
-                <li key={index} className='px-5 max-w-full md:max-w-1/2 lg:max-w-1/3'>
-                  <div className='relative w-80 m-4 min-h-[180px] transition-scale'>
-                    <img src={`/images/${project.key}.jpg`} alt={project.key} />
-                  </div>
-                  <p>{project.name}</p>
-                  <div className='flex justify-center items-center pt-2.5'>
-                    {project.website !== null && (
-                      <a href={project.website} target='_blank' rel='noreferrer' className='transition-scale'>
-                        <object data='/images/website.svg' type='image/svg+xml' className='w-full px-2.5 pointer-events-none max-w-[40px]'>
-                          Website
-                        </object>
-                      </a>
-                    )}
-                    {project.github !== null && (
-                      <a href={project.github} target='_blank' rel='noreferrer' className='transition-scale'>
-                        <object data='/images/github.svg' type='image/svg+xml' className='w-full px-2.5 pointer-events-none max-w-[40px]'>
-                          Github
-                        </object>
-                      </a>
-                    )}
-                  </div>
-                </li>
+                <ProjectListItem key={index} project={project} />
               ))}
             </ul>
           </div>
@@ -129,11 +113,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
             <h2>Skills</h2>
             <ul className='max-w-3xl pt-12 m-auto flex justify-center items-center flex-wrap'>
               {skills.map((skill, index) => (
-                <li key={index}>
-                  <object data={`/images/${skill.key}.svg`} type='image/svg+xml' className='w-20 p-4 transition-scale'>
-                    {skill.name}
-                  </object>
-                </li>
+                <SkillListItem key={index} skill={skill} />
               ))}
             </ul>
           </div>
@@ -145,13 +125,9 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
           <p>Contacts</p>
           <ul className='flex flex-1 justify-end'>
             {contacts.map((contact, index) => (
-              <li key={index} className='ml-5 w-8 transition-scale'>
-                <a href={contact.link} target='_blank' rel='noreferrer' className='flex'>
-                  <div className='relative w-8 h-8'>
-                    <Image layout='fill' objectFit='contain' src={`/images/${contact.key}.svg`} alt={contact.key} />
-                  </div>
-                </a>
-              </li>
+              contact.active && (
+                <ContactListItem key={index} contact={contact} />
+              )
             ))}
           </ul>
         </div>

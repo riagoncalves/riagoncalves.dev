@@ -1,18 +1,22 @@
 [
   {
     "key": "email",
-    "link": "mailto:hello@riagoncalves.dev"
+    "link": "mailto:hello@riagoncalves.dev",
+    "active": true
   },
   {
     "key": "github",
-    "link": "https://github.com/riagoncalves"
+    "link": "https://github.com/riagoncalves",
+    "active": true
   },
   {
     "key": "twitter",
-    "link": "https://twitter.com/at_riagoncalves"
+    "link": "https://twitter.com/at_riagoncalves",
+    "active": true
   },
   {
     "key": "linkedin",
-    "link": "https://www.linkedin.com/in/riagoncalves/"
+    "link": "https://www.linkedin.com/in/riagoncalves/",
+    "active": true
   }
 ]
