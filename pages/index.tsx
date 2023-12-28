@@ -34,21 +34,24 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
   return (
     <div>
       <Head>
-        <title>Ricardo Gonçalves - Web Developer</title>
-        <meta name='description' content='Web Developer based in Lisbon' />
-        <meta name='keywords' content='HTML,CSS,Rails,JavaScript' />
+        <title>Ricardo Gonçalves - Web Developer | Lisbon</title>
+        <meta name='description' content='Passionate Web Developer based in Lisbon.' />
+        <meta name='keywords' content='HTML, CSS, Ruby on Rails, React, JavaScript, TypeScript, PostgreSQL, web development, software engineering' />
         <meta name='author' content='Ricardo Gonçalves' />
-        <meta property='og:title' content='Ricardo Gonçalves - Web Developer' />
-        <meta property='og:description' content='Web Developer based in Lisbon' />
+
+        <meta property='og:title' content='Ricardo Gonçalves - Web Developer | Lisbon' />
+        <meta property='og:description' content='Passionate Web Developer based in Lisbon.' />
         <meta property='og:type' content='website' />
-        <meta property='og:url' content='' />
+        <meta property='og:url' content='https://riagoncalves.dev' />
         <meta property='og:site_name' content='Ricardo Gonçalves - Web Developer' />
         <meta property='og:image' content='/images/thumbnail.jpg' />
 
-        <meta name='twitter:title' content='Ricardo Gonçalves' />
-        <meta name='twitter:description' content='Web Developer based in Lisbon' />
+        <meta name='twitter:title' content='Ricardo Gonçalves - Web Developer | Lisbon' />
+        <meta name='twitter:description' content='Passionate Web Developer based in Lisbon.' />
         <meta name='twitter:image' content='/images/thumbnail.jpg' />
+
         <link rel='icon' href='/images/favicon.ico' />
+        <link rel='canonical' href='https://riagoncalves.dev' />
       </Head>
 
       <header className='py-6 fixed top-0 w-100'>
