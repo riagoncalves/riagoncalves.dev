@@ -34,20 +34,20 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
   return (
     <div>
       <Head>
-        <title>Ricardo Gonçalves - Web Developer | Lisbon</title>
-        <meta name='description' content='Passionate Web Developer based in Lisbon.' />
+        <title>Ricardo Gonçalves - Web Developer</title>
+        <meta name='description' content='Passionate Software Engineer' />
         <meta name='keywords' content='HTML, CSS, Ruby on Rails, React, JavaScript, TypeScript, PostgreSQL, web development, software engineering' />
         <meta name='author' content='Ricardo Gonçalves' />
 
-        <meta property='og:title' content='Ricardo Gonçalves - Web Developer | Lisbon' />
-        <meta property='og:description' content='Passionate Web Developer based in Lisbon.' />
+        <meta property='og:title' content='Ricardo Gonçalves - Software Engineer' />
+        <meta property='og:description' content='Passionate Software Engineer' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://riagoncalves.dev' />
-        <meta property='og:site_name' content='Ricardo Gonçalves - Web Developer' />
+        <meta property='og:site_name' content='Ricardo Gonçalves - Software Engineer' />
         <meta property='og:image' content='/images/thumbnail.jpg' />
 
-        <meta name='twitter:title' content='Ricardo Gonçalves - Web Developer | Lisbon' />
-        <meta name='twitter:description' content='Passionate Web Developer based in Lisbon.' />
+        <meta name='twitter:title' content='Ricardo Gonçalves - Software Engineer' />
+        <meta name='twitter:description' content='Passionate Software Engineer' />
         <meta name='twitter:image' content='/images/thumbnail.jpg' />
 
         <link rel='icon' href='/images/favicon.ico' />
@@ -85,9 +85,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
               <h1 className='py-4'>Ricardo Gonçalves</h1>
             </div>
             <p className='italic'>
-              <a href='https://www.google.com/maps/place/Portugal/@37.2219056,-18.8269796,5z/data=!3m1!4b1!4m5!3m4!1s0xb32242dbf4226d5:0x2ab84b091c4ef041!8m2!3d39.399872!4d-8.224454' target='_blank' rel='noreferrer' className='hover:italic'>
-                Web Developer based in Portugal
-              </a>
+              Passionate Software Engineer
             </p>
           </div>
         </section>
