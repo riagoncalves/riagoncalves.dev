@@ -1,9 +1,6 @@
 import Image from 'next/image'
 
-interface Contact {
-  key: string
-  link: string
-}
+import Contact from '../interfaces/Contact'
 
 interface ContactListItemProps {
   contact: Contact

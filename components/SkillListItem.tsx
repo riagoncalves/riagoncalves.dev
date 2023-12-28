@@ -1,7 +1,4 @@
-interface Skill {
-  key: string
-  name: string
-}
+import Skill from '../interfaces/Skill'
 
 interface SkillListItemProps {
   skill: Skill

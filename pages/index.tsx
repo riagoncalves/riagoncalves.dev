@@ -6,26 +6,18 @@ import Projects from '../data/projects.json'
 import Skills from '../data/skills.json'
 import Contacts from '../data/contacts.json'
 
+import Project from '../interfaces/Project'
+import Skill from '../interfaces/Skill'
+import Contact from '../interfaces/Contact'
+
 import ProjectListItem from '../components/ProjectListItem'
 import SkillListItem from '../components/SkillListItem'
 import ContactListItem from '../components/ContactListItem'
 
 interface HomePageProps {
-  projects: Array<{
-    key: string
-    name: string
-    website: string | null
-    github: string | null
-  }>
-  skills: Array<{
-    key: string
-    name: string
-  }>
-  contacts: Array<{
-    key: string
-    link: string
-    active: boolean
-  }>
+  projects: Project[]
+  skills: Skill[]
+  contacts: Contact[]
 }
 
 export async function getStaticProps (): Promise<{ props: HomePageProps }> {
