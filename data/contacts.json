@@ -10,7 +10,7 @@
     "active": true
   },
   {
-    "key": "twitter",
+    "key": "x",
     "link": "https://twitter.com/at_riagoncalves",
     "active": true
   },
@@ -18,5 +18,11 @@
     "key": "linkedin",
     "link": "https://www.linkedin.com/in/riagoncalves/",
     "active": true
+  }
+  ,
+  {
+    "key": "medium",
+    "link": "https://medium.com/@riagoncalves",
+    "active": false
   }
 ]

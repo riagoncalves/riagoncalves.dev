@@ -14,6 +14,8 @@ import ProjectListItem from '../components/ProjectListItem'
 import SkillListItem from '../components/SkillListItem'
 import ContactListItem from '../components/ContactListItem'
 
+import scrollTo from '../utils/scrollTo'
+
 interface HomePageProps {
   projects: Project[]
   skills: Skill[]
@@ -34,19 +36,19 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
   return (
     <div>
       <Head>
-        <title>Ricardo Gonçalves - Web Developer</title>
+        <title>Ricardo Gonçalves | Software Engineer</title>
         <meta name='description' content='Passionate Software Engineer' />
         <meta name='keywords' content='HTML, CSS, Ruby on Rails, React, JavaScript, TypeScript, PostgreSQL, web development, software engineering' />
         <meta name='author' content='Ricardo Gonçalves' />
 
-        <meta property='og:title' content='Ricardo Gonçalves - Software Engineer' />
+        <meta property='og:title' content='Ricardo Gonçalves | Software Engineer' />
         <meta property='og:description' content='Passionate Software Engineer' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://riagoncalves.dev' />
-        <meta property='og:site_name' content='Ricardo Gonçalves - Software Engineer' />
+        <meta property='og:site_name' content='Ricardo Gonçalves | Software Engineer' />
         <meta property='og:image' content='/images/thumbnail.jpg' />
 
-        <meta name='twitter:title' content='Ricardo Gonçalves - Software Engineer' />
+        <meta name='twitter:title' content='Ricardo Gonçalves | Software Engineer' />
         <meta name='twitter:description' content='Passionate Software Engineer' />
         <meta name='twitter:image' content='/images/thumbnail.jpg' />
 
@@ -54,8 +56,8 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
         <link rel='canonical' href='https://riagoncalves.dev' />
       </Head>
 
-      <header className='py-6 fixed top-0 w-100'>
-        <nav className='max-w-screen-2xl w-full mx-auto px-8 2xl:px-0'>
+      <header className='py-6 top-0 w-100'>
+        <nav className='max-w-screen-xl w-full mx-auto px-8 2xl:px-0'>
           <ul className='flex items-center'>
             <li className='flex-1'>
               <a href='#'>
@@ -65,22 +67,22 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
               </a>
             </li>
             <li className='pl-8'>
-              <a href='' className='font-main font-bold text-white text-lmd'>
+              <button onClick={scrollTo('projects')} className='font-main font-bold text-white text-lmd'>
                 Projects
-              </a>
+              </button>
             </li>
             <li className='pl-8'>
-              <a href='' className='font-main font-bold text-white text-lmd'>
+              <button onClick={scrollTo('skills')} className='font-main font-bold text-white text-lmd'>
                 Skills
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
       </header>
 
       <main>
-        <section className='relative h-screen bg-no-repeat bg-center bg-cover flex items-center justify-end'>
-          <div className='max-w-screen-2xl w-full mx-auto px-8 2xl:px-0'>
+        <section className='relative h-screen bg-no-repeat bg-center bg-cover flex items-center justify-end pt-0'>
+          <div className='max-w-screen-xl w-full mx-auto px-8 2xl:px-0'>
             <div className='inline-block typewriter'>
               <h1 className='py-4'>Ricardo Gonçalves</h1>
             </div>
@@ -90,7 +92,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
           </div>
         </section>
 
-        <section className='pb-20'>
+        <section id='projects' className='pb-20'>
           <div className='max-w-screen-2xl w-full mx-auto text-center'>
             <h2>Projects</h2>
             <ul className='flex justify-center flex-wrap items-start pt-12'>
@@ -101,7 +103,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
           </div>
         </section>
 
-        <section className='pb-0'>
+        <section id='skills' className='pb-0'>
           <div className='max-w-screen-2xl w-full mx-auto text-center after:mt-32 after:h-[3px] after:block after:bg-divider'>
             <h2>Skills</h2>
             <ul className='max-w-3xl pt-12 m-auto flex justify-center items-center flex-wrap'>
