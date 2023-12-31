@@ -15,7 +15,7 @@ const ContactListItem: React.FC<ContactListItemProps> = ({ contact }: ContactLis
             layout='fill'
             objectFit='contain'
             src={`/images/${contact.key}.svg`}
-            alt={contact.key}
+            alt={contact.name}
           />
         </div>
       </a>

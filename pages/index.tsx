@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import Image from 'next/image'
 
 import Projects from '../data/projects.json'
@@ -10,10 +9,11 @@ import Project from '../interfaces/Project'
 import Skill from '../interfaces/Skill'
 import Contact from '../interfaces/Contact'
 
+import AppHead from '../components/AppHead'
 import ContactsWidget from '../components/ContactsWidget'
 import ProjectListItem from '../components/ProjectListItem'
 import SkillListItem from '../components/SkillListItem'
-import ContactListItem from '../components/ContactListItem'
+import Footer from '../components/Footer'
 
 import scrollTo from '../utils/scrollTo'
 
@@ -36,26 +36,7 @@ export async function getStaticProps (): Promise<{ props: HomePageProps }> {
 const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
   return (
     <div>
-      <Head>
-        <title>Ricardo Gonçalves | Software Engineer</title>
-        <meta name='description' content='Passionate Software Engineer' />
-        <meta name='keywords' content='HTML, CSS, Ruby on Rails, React, JavaScript, TypeScript, PostgreSQL, web development, software engineering' />
-        <meta name='author' content='Ricardo Gonçalves' />
-
-        <meta property='og:title' content='Ricardo Gonçalves | Software Engineer' />
-        <meta property='og:description' content='Passionate Software Engineer' />
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://riagoncalves.dev' />
-        <meta property='og:site_name' content='Ricardo Gonçalves | Software Engineer' />
-        <meta property='og:image' content='/images/thumbnail.jpg' />
-
-        <meta name='twitter:title' content='Ricardo Gonçalves | Software Engineer' />
-        <meta name='twitter:description' content='Passionate Software Engineer' />
-        <meta name='twitter:image' content='/images/thumbnail.jpg' />
-
-        <link rel='icon' href='/images/favicon.ico' />
-        <link rel='canonical' href='https://riagoncalves.dev' />
-      </Head>
+      <AppHead />
 
       <header className='py-6 top-0 w-100'>
         <nav className='max-w-screen-xl w-full mx-auto px-8 2xl:px-0'>
@@ -84,7 +65,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
       <main>
         <ContactsWidget contacts={contacts} />
 
-        <section className='relative h-screen bg-no-repeat bg-center bg-cover flex items-center justify-end pt-0'>
+        <section id='intro' className='relative h-screen bg-no-repeat bg-center bg-cover flex items-center justify-end pt-0'>
           <div className='max-w-screen-xl w-full mx-auto px-8 2xl:px-0'>
             <div className='inline-block typewriter'>
               <h1 className='py-4'>Ricardo Gonçalves</h1>
@@ -118,18 +99,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
         </section>
       </main>
 
-      <footer className='p-12'>
-        <div className='flex max-w-screen-2xl w-full mx-auto'>
-          <p>Contacts</p>
-          <ul className='flex flex-1 justify-end'>
-            {contacts.map((contact, index) => (
-              contact.active && (
-                <ContactListItem key={index} contact={contact} />
-              )
-            ))}
-          </ul>
-        </div>
-      </footer>
+      <Footer contacts={contacts} />
     </div>
   )
 }
