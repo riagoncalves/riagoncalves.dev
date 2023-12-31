@@ -88,7 +88,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
         </section>
 
         <section id='skills' className='pb-0'>
-          <div className='max-w-screen-2xl w-full mx-auto text-center after:mt-32 after:h-[3px] after:block after:bg-divider'>
+          <div className='max-w-screen-2xl w-full mx-auto text-center mb-32'>
             <h2>Skills</h2>
             <ul className='max-w-3xl pt-12 m-auto flex justify-center items-center flex-wrap'>
               {skills.map((skill, index) => (
