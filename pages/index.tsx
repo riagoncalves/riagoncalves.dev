@@ -10,6 +10,7 @@ import Project from '../interfaces/Project'
 import Skill from '../interfaces/Skill'
 import Contact from '../interfaces/Contact'
 
+import ContactsWidget from '../components/ContactsWidget'
 import ProjectListItem from '../components/ProjectListItem'
 import SkillListItem from '../components/SkillListItem'
 import ContactListItem from '../components/ContactListItem'
@@ -81,6 +82,8 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
       </header>
 
       <main>
+        <ContactsWidget contacts={contacts} />
+
         <section className='relative h-screen bg-no-repeat bg-center bg-cover flex items-center justify-end pt-0'>
           <div className='max-w-screen-xl w-full mx-auto px-8 2xl:px-0'>
             <div className='inline-block typewriter'>
