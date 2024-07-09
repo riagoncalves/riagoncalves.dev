@@ -49,27 +49,28 @@ small {
   @apply transition-transform ease-in-out duration-200 hover:scale-110;
 }
 
-/* Typing animation test */
-.typewriter h1 {
-  color: #fff;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15rem solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  letter-spacing: .15rem; /* Adjust as needed */
-  animation: 
-    typing 1.5s steps(17, end),
-    blink-caret .5s step-end infinite;
+.curtain {
+  width: fit-content;
+  position: relative;
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+.curtain span {
+  width: 105%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -5%;
+  background-color: #fff;
+  animation:
+    curtain .7s ease .3s forwards;
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
+.curtain--delayed span {
+  animation:
+    curtain .7s ease .6s forwards;
+}
+
+@keyframes curtain {
+  from { width: 100% }
+  to { width: 0 }
 }

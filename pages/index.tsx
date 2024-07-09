@@ -58,6 +58,12 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
                 Skills
               </button>
             </li>
+
+            <li className='pl-8'>
+              <a href='cv.pdf' className='font-main font-bold text-white text-lmd'>
+                Curriculum
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -67,12 +73,21 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
 
         <section id='intro' className='relative h-screen bg-no-repeat bg-center bg-cover flex items-center justify-end pt-0'>
           <div className='max-w-screen-xl w-full mx-auto px-8 2xl:px-0'>
-            <div className='inline-block typewriter'>
-              <h1 className='py-4'>Ricardo Gonçalves</h1>
+            <div className='inline-block'>
+              <h1 className='curtain py-4'>
+                <span></span>
+                Ricardo Gonçalves
+              </h1>
             </div>
-            <p className='italic'>
+            <p className='mt-4 curtain curtain--delayed italic'>
+              <span></span>
               Passionate Software Engineer
             </p>
+            <div>
+              <button onClick={scrollTo('projects')} className='mt-8 px-4 py-2 bg-white text-black font-main font-bold hover:bg-black hover:text-white transition'>
+                View my work
+              </button>
+            </div>
           </div>
         </section>
 
