@@ -1,29 +1,29 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 
-import Projects from '../data/projects.json'
-import Skills from '../data/skills.json'
-import Contacts from '../data/contacts.json'
+import Projects from '@data/projects.json'
+import Skills from '@data/skills.json'
+import Contacts from '@data/contacts.json'
+
+import Project from '@interfaces/Project'
+import Skill from '@interfaces/Skill'
+import Contact from '@interfaces/Contact'
+
+import AppHead from '@components/AppHead'
+import ContactsWidget from '@components/ContactsWidget'
+import ProjectListItem from '@components/ProjectListItem'
+import SkillListItem from '@components/SkillListItem'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
+
+import scrollTo from '@utils/scrollTo'
 
 interface HomePageProps {
-  projects: Array<{
-    key: string
-    name: string
-    website?: string
-    github?: string
-  }>
-  skills: Array<{
-    key: string
-    name: string
-  }>
-  contacts: Array<{
-    key: string
-    link: string
-  }>
+  projects: Project[]
+  skills: Skill[]
+  contacts: Contact[]
 }
 
-export async function getStaticProps (): Promise<{props: HomePageProps }> {
+export async function getStaticProps (): Promise<{ props: HomePageProps }> {
   return {
     props: {
       projects: Projects,
@@ -36,108 +36,59 @@ export async function getStaticProps (): Promise<{props: HomePageProps }> {
 const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
   return (
     <div>
-      <Head>
-        <title>Ricardo Gonçalves - Web Developer</title>
-        <meta name='description' content='Web Developer based in Lisbon' />
-        <meta name='keywords' content='HTML,CSS,Rails,JavaScript' />
-        <meta name='author' content='Ricardo Gonçalves' />
-        <meta property='og:title' content='Ricardo Gonçalves - Web Developer' />
-        <meta property='og:description' content='Web Developer based in Lisbon' />
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content='' />
-        <meta property='og:site_name' content='Ricardo Gonçalves - Web Developer' />
-        <meta property='og:image' content='/images/thumbnail.jpg' />
-
-        <meta name='twitter:title' content='Ricardo Gonçalves' />
-        <meta name='twitter:description' content='Web Developer based in Lisbon' />
-        <meta name='twitter:image' content='/images/thumbnail.jpg' />
-        <link rel='icon' href='/images/favicon.ico' />
-      </Head>
+      <AppHead />
+      <Header />
 
       <main>
-        <section className='relative h-screen bg-no-repeat bg-center bg-cover flex items-center justify-end bg-hero-pattern'>
-          <div className='max-w-screen-2xl w-full mx-auto text-right px-8 2xl:px-0'>
-            <div className='transition-scale w-36 h-36 relative ml-auto mr-0'>
-              <Image
-                src='/images/profile_pic.jpg'
-                layout='fill'
-                objectFit='contain'
-                alt='Profile Picture'
-                className='border border-solid border-black rounded-full'
-              />
+        <ContactsWidget contacts={contacts} />
+
+        <section id='intro' className='relative min-h-screen bg-no-repeat bg-center bg-cover flex items-center justify-center py-0 bg-space overflow-hidden'>
+          <div className='max-w-screen-xl w-full text-center mx-auto px-8 2xl:px-0'>
+            <div className='inline-block'>
+              <h1 className='curtain py-4'>
+                <span />
+                Ricardo Gonçalves
+              </h1>
             </div>
-            <h1 className='py-4'>Ricardo Gonçalves</h1>
-            <h2>
-              Web Developer based in <a href='https://www.google.com/maps/place/Portugal/@37.2219056,-18.8269796,5z/data=!3m1!4b1!4m5!3m4!1s0xb32242dbf4226d5:0x2ab84b091c4ef041!8m2!3d39.399872!4d-8.224454' target='_blank' rel='noreferrer' className='hover:italic'>Portugal</a>
-            </h2>
+            <div className='flex justify-center items-center'>
+              <p className='mt-4 curtain curtain--delayed italic'>
+                <span />
+                Nebula Navigator, Engineering Software Beyond the Stars
+              </p>
+            </div>
+            <div>
+              <button onClick={scrollTo('projects')} className='fade-in mt-8 px-4 py-2 bg-white text-black font-main font-bold hover:bg-black hover:text-white transition'>
+                View my work
+              </button>
+            </div>
           </div>
-          <div className='absolute w-screen h-1/5-screen bottom-0 left-0 bg-gradient-to-b from-transparent to-main' />
+          <span className='space' />
         </section>
 
-        <section className='pb-20'>
+        <section id='projects' className='pb-20 flex justify-center items-center'>
           <div className='max-w-screen-2xl w-full mx-auto text-center'>
-            <h1>Projects</h1>
-            <ul className='flex justify-center flex-wrap items-start pt-12'>
+            <h2>Projects</h2>
+            <ul className='flex justify-center flex-wrap items-start pt-24'>
               {projects.map((project, index) => (
-                <li key={index} className='px-5 max-w-full md:max-w-1/2 lg:max-w-1/3'>
-                  <div className='relative w-80 m-4 min-h-[180px] transition-scale'>
-                    <Image layout='fill' objectFit='contain' src={`/images/${project.key}.jpg`} alt={project.key} />
-                  </div>
-                  <p>{project.name}</p>
-                  <div className='flex justify-center items-center pt-2.5'>
-                    {project.website !== null && (
-                      <a href={project.website} target='_blank' rel='noreferrer' className='transition-scale'>
-                        <object data='/images/website.svg' type='image/svg+xml' className='w-full px-2.5 pointer-events-none max-w-[40px]'>
-                          Website
-                        </object>
-                      </a>
-                    )}
-                    {project.github !== null && (
-                      <a href={project.github} target='_blank' rel='noreferrer' className='transition-scale'>
-                        <object data='/images/github.svg' type='image/svg+xml' className='w-full px-2.5 pointer-events-none max-w-[40px]'>
-                          Github
-                        </object>
-                      </a>
-                    )}
-                  </div>
-                </li>
+                <ProjectListItem key={index} project={project} />
               ))}
             </ul>
           </div>
         </section>
 
-        <section className='pb-0'>
-          <div className='max-w-screen-2xl w-full mx-auto text-center after:mt-32 after:h-[3px] after:block after:bg-divider'>
-            <h1>Skills</h1>
-            <ul className='max-w-3xl pt-12 m-auto flex justify-center items-center flex-wrap'>
+        <section id='skills' className='pb-0'>
+          <div className='max-w-screen-2xl w-full mx-auto text-center mb-32'>
+            <h2>Skills</h2>
+            <ul className='max-w-3xl pt-24 m-auto flex justify-center items-center flex-wrap'>
               {skills.map((skill, index) => (
-                <li key={index}>
-                  <object data={`/images/${skill.key}.svg`} type='image/svg+xml' className='w-20 p-4 transition-scale'>
-                    {skill.name}
-                  </object>
-                </li>
+                <SkillListItem key={index} skill={skill} />
               ))}
             </ul>
           </div>
         </section>
       </main>
 
-      <footer className='p-12'>
-        <div className='flex max-w-screen-2xl w-full mx-auto'>
-          <p>Contacts</p>
-          <ul className='flex flex-1 justify-end'>
-            {contacts.map((contact, index) => (
-              <li key={index} className='ml-5 w-8 transition-scale'>
-                <a href={contact.link} target='_blank' rel='noreferrer' className='flex'>
-                  <div className='relative w-8 h-8'>
-                    <Image layout='fill' objectFit='contain' src={`/images/${contact.key}.svg`} alt={contact.key} />
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </footer>
+      <Footer contacts={contacts} />
     </div>
   )
 }

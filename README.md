@@ -19,7 +19,7 @@
 
 ### Requirements
 
--   Node v12.22.0 or higher
+-   Node v18.19.0 or higher
 
 ### Getting Started
 
@@ -27,12 +27,6 @@
 -   Create your environment variables file named `.env`
 -   Fill in with your env variables
 -   Run `yarn dev` for a development build or `yarn build` and `yarn start` for a production build
-
-## Links
-
-- [Website](https://riagoncalves.dev/)
-- [GitHub](https://github.com/riagoncalves/riagoncalves.dev)
-- [Trello](https://trello.com/b/Vj3TE5WM/riagoncalvesdev)
 
 ## License
 
