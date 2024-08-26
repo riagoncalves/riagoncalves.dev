@@ -1,15 +1,33 @@
 [
   {
+    "key": "riagoncalvesv2",
+    "name": "riagoncalves.dev - Version 2",
+    "description": "The second version of my personal website. It's a portfolio website that showcases my projects, skills, and experience.",
+    "technologies": ["NextJs", "TailwindCSS", "TypeScript"],
+    "website": null,
+    "github": "https://github.com/riagoncalves/riagoncalves.dev"
+  },
+  {
     "key": "bot",
     "name": "Shinobu - Discord Bot",
     "description": "Shinobu is a Discord bot that provides a variety of features to enhance your Discord server. It includes features like moderation, music, fun, and more.",
+    "technologies": ["NextJs", "DiscordJS", "Express", "PostgreSQL", "TailwindCSS"],
     "website": null,
     "github": "https://github.com/riagoncalves/shinobu"
+  },
+  {
+    "key": "riagoncalvesv1",
+    "name": "riagoncalves.dev - Version 1",
+    "description": "The first version of my personal website. It was a simple website that I created to showcase my projects and skills.",
+    "technologies": ["Ruby on Rails", "PostgreSQL"],
+    "website": null,
+    "github": "https://github.com/riagoncalves/riagoncalves_website_v1"
   },
   {
     "key": "sarcastify",
     "name": "Sarcastify - Text to Sarcastic Text Converter",
     "description": "Sarcastify is a simple web app that converts text to sarcastic text. It's a fun project that I created to practice my web development skills.",
+    "technologies": ["NextJs"],
     "website": "https://sarcastify.riagoncalves.dev/",
     "github": "https://github.com/riagoncalves/sarcastify"
   },
@@ -17,6 +35,7 @@
     "key": "transfer",
     "name": "Transfer - Website Theme",
     "description": "Transfer is a simple and clean website theme that I created to practice my web development skills. It's a responsive theme that can be used for a variety of purposes.",
+    "technologies": ["HTML", "CSS", "JavaScript", "Gulp"],
     "website": "https://transfer-template.netlify.app/",
     "github": "https://github.com/riagoncalves/transfer-website-theme"
   }

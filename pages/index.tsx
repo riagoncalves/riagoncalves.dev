@@ -10,10 +10,10 @@ import Contact from '@interfaces/Contact'
 
 import AppHead from '@components/AppHead'
 import ContactsWidget from '@components/ContactsWidget'
-import ProjectListItem from '@components/ProjectListItem'
 import SkillListItem from '@components/SkillListItem'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import ProjectsList from '@/components/ProjectsList'
 
 import scrollTo from '@utils/scrollTo'
 
@@ -65,16 +65,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
           <span className='space' />
         </section>
 
-        <section id='projects' className='pb-20 flex justify-center items-center'>
-          <div className='max-w-screen-2xl w-full mx-auto text-center'>
-            <h2>Projects</h2>
-            <ul className='flex justify-center flex-wrap items-start pt-24'>
-              {projects.map((project, index) => (
-                <ProjectListItem key={index} project={project} />
-              ))}
-            </ul>
-          </div>
-        </section>
+        <ProjectsList projects={projects} />
 
         <section id='skills' className='pb-0'>
           <div className='max-w-screen-2xl w-full mx-auto text-center mb-32'>
