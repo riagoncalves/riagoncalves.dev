@@ -6,35 +6,45 @@ interface ProjectListItemProps {
 
 const ProjectListItem: React.FC<ProjectListItemProps> = ({ project }: ProjectListItemProps) => {
   return (
-    <li key={project.key} className='px-5 max-w-full md:max-w-1/2 lg:max-w-1/3'>
-      <div className='relative w-80 m-4 min-h-[180px] transition-scale'>
-        <img src={`/images/${project.key}.jpg`} alt={project.key} />
-      </div>
-      <p>{project.name}</p>
-      <div className='flex justify-center items-center pt-2.5'>
-        {project.website !== null && (
-          <a href={project.website} target='_blank' rel='noreferrer' className='transition-scale'>
-            <object
-              data='/images/website.svg'
-              type='image/svg+xml'
-              className='w-full px-2.5 pointer-events-none max-w-[40px]'
+    <li
+      key={project.key}
+      className='project-card'
+      style={
+        {
+          backgroundImage: `url(/images/projects/${project.key}.jpg)`
+        }
+      }
+    >
+      <div className='z-10 relative text-left sm:pr-24 pb-8'>
+        <h3>{project.name}</h3>
+        <div className='pt-8'>
+          <p>{project.description}</p>
+          <small><strong>Technologies:</strong> {project.technologies.join(', ')}</small>
+        </div>
+        <div className='pt-4'>
+          {project.website !== null && project.website !== '' && (
+            <a
+              href={project.website}
+              target='_blank'
+              rel='noreferrer'
+              className='inline-block mt-4 px-4 py-2 mr-4 bg-main text-white rounded-lg hover:scale-105 transition'
             >
-              Website
-            </object>
-          </a>
-        )}
-        {project.github !== null && (
-          <a href={project.github} target='_blank' rel='noreferrer' className='transition-scale'>
-            <object
-              data='/images/github.svg'
-              type='image/svg+xml'
-              className='w-full px-2.5 pointer-events-none max-w-[40px]'
+              Visit Website
+            </a>
+          )}
+          {project.github !== null && project.github !== '' && (
+            <a
+              href={project.github}
+              target='_blank'
+              rel='noreferrer'
+              className='inline-block mt-4 px-4 py-2 bg-main text-white rounded-lg hover:scale-105 transition'
             >
-              Github
-            </object>
-          </a>
-        )}
+              View Repository
+            </a>
+          )}
+        </div>
       </div>
+      <span className='project-card__overlay' />
     </li>
   )
 }
