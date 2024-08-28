@@ -1,70 +1,65 @@
-[
-  {
-    "key": "html",
-    "name": "HTML"
-  },
-  {
-    "key": "css",
-    "name": "CSS"
-  },
-  {
-    "key": "sass",
-    "name": "Sass"
-  },
-  {
-    "key": "js",
-    "name": "JavaScript"
-  },
-  {
-    "key": "typescript",
-    "name": "TypeScript"
-  },
-  {
-    "key": "ruby",
-    "name": "Ruby"
-  },
-  {
-    "key": "rails",
-    "name": "Ruby On Rails"
-  },
-  {
-    "key": "express",
-    "name": "Express"
-  },
-  {
-    "key": "react",
-    "name": "React"
-  },
-  {
-    "key": "next",
-    "name": "NextJs"
-  },
-  {
-    "key": "webpack",
-    "name": "Webpack"
-  },
-  {
-    "key": "kotlin",
-    "name": "Kotlin"
-  },
-  {
-    "key": "java",
-    "name": "Java"
-  },
-  {
-    "key": "sequelize",
-    "name": "Sequelize"
-  },
-  {
-    "key": "postgresql",
-    "name": "Postgresql"
-  },
-  {
-    "key": "wordpress",
-    "name": "Wordpress"
-  },
-  {
-    "key": "git",
-    "name": "Git"
-  }
-]
+{
+  "frameworks": [
+    {
+      "key": "rails",
+      "name": "Ruby On Rails",
+      "level": 3
+    },
+    {
+      "key": "next",
+      "name": "NextJs",
+      "level": 3
+    },
+    {
+      "key": "react",
+      "name": "React",
+      "level": 3
+    },
+    {
+      "key": "webpack",
+      "name": "Webpack",
+      "level": 2
+    }
+  ],
+  "languages": [
+    {
+      "key": "ruby",
+      "name": "Ruby",
+      "level": 3
+    },
+    {
+      "key": "typescript",
+      "name": "TypeScript",
+      "level": 3
+    },
+    {
+      "key": "js",
+      "name": "JavaScript",
+      "level": 3
+    }
+  ],
+  "databases": [
+    {
+      "key": "postgresql",
+      "name": "PostgreSQL",
+      "level": 2
+    },
+    {
+      "key": "mysql",
+      "name": "MySQL",
+      "level": 2
+    }
+  ],
+  "tools": [
+    {
+      "key": "git",
+      "name": "Git",
+      "level": 3
+    },
+    {
+      "key": "wordpress",
+      "name": "Wordpress",
+      "level": 2
+    }
+  ]
+}
