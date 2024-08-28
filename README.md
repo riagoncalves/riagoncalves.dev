@@ -6,7 +6,7 @@
 
 <h1 align="center">riagoncalves.dev</h1>
 <p align="center">
-  Personal website.
+  Welcome to <strong>riagoncalves.dev</strong> — my personal portfolio showcasing my projects and skills.
 </p>
 
 <p align="center">
@@ -15,19 +15,48 @@
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard" /></a>
 </p>
 
-## Installation
+## 🛠 Installation
 
 ### Requirements
 
 -   Node v18.19.0 or higher
 
 ### Getting Started
+1. **Clone the Repository**
 
--   Clone this repo and run `yarn install`
--   Create your environment variables file named `.env`
--   Fill in with your env variables
--   Run `yarn dev` for a development build or `yarn build` and `yarn start` for a production build
+   ```bash
+   git clone https://github.com/riagoncalves/riagoncalves.dev.git
+   cd riagoncalves.dev
+   ```
 
-## License
+2. **Install Dependencies**
+
+   ```bash
+    yarn install
+    ```
+
+3. **Start the Development Server**
+
+   ```bash
+   yarn dev
+   ```
+
+
+## 🚀 Deployment
+
+### Netlify
+
+1. **Create a new site on Netlify**
+
+2. **Link your GitHub repository to Netlify**
+
+3. **Configure the build settings**
+
+   - Build command: `yarn deploy`
+   - Publish directory: `out`
+
+4. **Deploy your site**
+
+## 📝 License
 
 [MIT](LICENSE)
