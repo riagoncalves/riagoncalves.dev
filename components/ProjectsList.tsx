@@ -1,11 +1,11 @@
 import Project from '@/interfaces/Project'
 import ProjectListItem from './ProjectListItem'
 
-interface ProjecstListmProps {
+interface ProjectsListProps {
   projects: Project[]
 }
 
-const ProjectsList: React.FC<ProjecstListmProps> = ({ projects }: ProjecstListmProps) => {
+const ProjectsList: React.FC<ProjectsListProps> = ({ projects }: ProjectsListProps) => {
   return (
     <section id='projects' className='pb-20 flex justify-center items-center'>
       <div className='max-w-screen-2xl w-full mx-auto text-center'>

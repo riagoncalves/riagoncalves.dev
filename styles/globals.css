@@ -22,7 +22,7 @@ main, section, header {
 }
 
 section {
-  @apply py-40;
+  @apply my-16 sm:my-24;
 }
 
 h1, h2, h3, p, a, small {
@@ -30,11 +30,11 @@ h1, h2, h3, p, a, small {
 }
 
 h1 {
-  @apply text-6xl font-extrabold;
+  @apply text-5xl sm:text-6xl font-extrabold;
 }
 
 h2 {
-  @apply text-5xl font-extrabold;
+  @apply text-4xl sm:text-5xl font-extrabold;
 }
 
 h3 {
@@ -42,7 +42,7 @@ h3 {
 }
 
 p {
-  @apply text-lg;
+  @apply text-base sm:text-lg;
 }
 
 small {
@@ -82,6 +82,10 @@ small {
 
 .project-card {
   @apply px-5 h-96 flex flex-col justify-end max-w-screen-lg bg-cover bg-center relative mb-32 shadow-2xl transition-transform duration-300 hover:scale-105;
+}
+
+.project-card:last-child {
+  @apply mb-0;
 }
 
 .project-card__overlay {

@@ -5,21 +5,21 @@ import Skills from '@data/skills.json'
 import Contacts from '@data/contacts.json'
 
 import Project from '@interfaces/Project'
-import Skill from '@interfaces/Skill'
 import Contact from '@interfaces/Contact'
+import SkillsData from '@/interfaces/SkillsData'
 
 import AppHead from '@components/AppHead'
 import ContactsWidget from '@components/ContactsWidget'
-import SkillListItem from '@components/SkillListItem'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
 import ProjectsList from '@/components/ProjectsList'
+import SkillsList from '@/components/SkillsList'
 
 import scrollTo from '@utils/scrollTo'
 
 interface HomePageProps {
   projects: Project[]
-  skills: Skill[]
+  skills: SkillsData
   contacts: Contact[]
 }
 
@@ -42,7 +42,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
       <main>
         <ContactsWidget contacts={contacts} />
 
-        <section id='intro' className='relative min-h-screen bg-no-repeat bg-center bg-cover flex items-center justify-center py-0 bg-space overflow-hidden'>
+        <section id='intro' className='relative min-h-screen bg-no-repeat bg-center bg-cover flex items-center justify-center mt-0 bg-space overflow-hidden'>
           <div className='max-w-screen-xl w-full text-center mx-auto px-8 2xl:px-0'>
             <div className='inline-block'>
               <h1 className='curtain py-4'>
@@ -67,16 +67,7 @@ const Home: NextPage<HomePageProps> = ({ projects, skills, contacts }) => {
 
         <ProjectsList projects={projects} />
 
-        <section id='skills' className='pb-0'>
-          <div className='max-w-screen-2xl w-full mx-auto text-center mb-32'>
-            <h2>Skills</h2>
-            <ul className='max-w-3xl pt-24 m-auto flex justify-center items-center flex-wrap'>
-              {skills.map((skill, index) => (
-                <SkillListItem key={index} skill={skill} />
-              ))}
-            </ul>
-          </div>
-        </section>
+        <SkillsList skills={skills} />
       </main>
 
       <Footer contacts={contacts} />

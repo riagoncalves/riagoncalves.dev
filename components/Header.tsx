@@ -11,18 +11,18 @@ const Header: React.FC<{}> = () => {
               <Image layout='fill' objectFit='contain' src='/images/logo-white.svg' alt='riagoncalves' />
             </div>
           </li>
-          <li className='pl-8'>
+          <li className='pl-4 sm:pl-8'>
             <button onClick={scrollTo('projects')} className='font-main font-bold text-white text-lmd'>
               Projects
             </button>
           </li>
-          <li className='pl-8'>
+          <li className='pl-4 sm:pl-8'>
             <button onClick={scrollTo('skills')} className='font-main font-bold text-white text-lmd'>
               Skills
             </button>
           </li>
 
-          <li className='pl-8'>
+          <li className='pl-4 sm:pl-8'>
             <a href='cv.pdf' className='font-main font-bold text-white text-lmd'>
               Curriculum
             </a>

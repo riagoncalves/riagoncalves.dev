@@ -22,7 +22,7 @@ const Footer: React.FC<FooterProps> = ({ contacts }: FooterProps) => {
       <ul className='flex py-8'>
         {contacts.map((contact) => (
           contact.active && contact.key !== 'email' &&
-            <li key={contact.key} className='px-8'>
+            <li key={contact.key} className='px-4 sm:px-8'>
               <a href={contact.link} target='_blank' rel='noreferrer'>
                 {contact.name}
               </a>
