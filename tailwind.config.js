@@ -1,14 +1,9 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}'
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
-      fontFamily: {
-        main: ['Montserrat', 'sans-seriff']
-      },
       maxWidth: {
         '1/2': '50%',
         '1/3': '33.333%'
@@ -22,8 +17,10 @@ module.exports = {
         '1/5-screen': '20vh'
       },
       colors: {
-        main: '#333333'
-      }
+        main: {
+          DEFAULT: '#333333'
+        }
+      },
     }
   },
   plugins: []

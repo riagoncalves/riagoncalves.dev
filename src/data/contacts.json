@@ -1,0 +1,33 @@
+[
+  {
+    "key": "email",
+    "name": "Email",
+    "link": "mailto:hello@riagoncalves.dev",
+    "active": true
+  },
+  {
+    "key": "github",
+    "name": "Github",
+    "link": "https://github.com/riagoncalves",
+    "active": true
+  },
+  {
+    "key": "x",
+    "name": "Twitter",
+    "link": "https://twitter.com/at_riagoncalves",
+    "active": true
+  },
+  {
+    "key": "linkedin",
+    "name": "Linkedin",
+    "link": "https://www.linkedin.com/in/riagoncalves/",
+    "active": true
+  }
+  ,
+  {
+    "key": "medium",
+    "name": "Medium",
+    "link": "https://medium.com/@riagoncalves",
+    "active": false
+  }
+]
