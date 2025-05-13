@@ -3,10 +3,11 @@
 import { useEffect } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import ReactGA from 'react-ga4';
+import { Suspense } from 'react';
 
 const GA_ID = 'G-M59WH6EKQL';
 
-export function AnalyticsProvider() {
+function Analytics() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -21,4 +22,12 @@ export function AnalyticsProvider() {
   }, [pathname, searchParams])
 
   return null;
+}
+
+export function AnalyticsProvider() {
+  return (
+    <Suspense>
+      <Analytics />
+    </Suspense>
+  );
 }
