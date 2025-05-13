@@ -12,7 +12,6 @@
 <p align="center">
   <a href="https://riagoncalves.dev/"><img alt="Netlify" src="https://api.netlify.com/api/v1/badges/1da2c2d6-bcab-401b-b3d5-2a67997676dd/deploy-status"></a>
   <a href="https://www.codefactor.io/repository/github/riagoncalves/riagoncalves.dev"><img src="https://www.codefactor.io/repository/github/riagoncalves/riagoncalves.dev/badge" alt="CodeFactor" /></a>
-  <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard" /></a>
 </p>
 
 ## 🛠 Installation
