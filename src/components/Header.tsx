@@ -17,6 +17,11 @@ export const Header = () => {
             </button>
           </li>
           <li className='pl-4 sm:pl-8'>
+            <button onClick={scrollTo('experience')} className='font-bold text-white text-lmd'>
+              Experience
+            </button>
+          </li>
+          <li className='pl-4 sm:pl-8'>
             <button onClick={scrollTo('skills')} className='font-bold text-white text-lmd'>
               Skills
             </button>
