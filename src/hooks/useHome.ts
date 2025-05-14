@@ -11,7 +11,6 @@ export function useHome() {
   const [experiences, setExperiences] = useState(ExperiencesData);
 
   useEffect(() => {
-    // Simulate fetching data from an API or local storage
     setProjects(ProjectsData);
     setSkills(SkillsData);
     setContacts(ContactsData);

@@ -8,27 +8,20 @@ interface Props {
 
 export const SkillsList: React.FC<Props> = ({ skills }: Props) => {
   return (
-    <section id='skills' className='pb-0'>
-      <div className='max-w-screen-2xl w-full mx-auto text-center mb-32'>
-        <h2>Skills</h2>
-        <ul className='max-w-3xl pt-24 m-auto grid grid-cols-1 sm:grid-cols-2 gap-8'>
-          {Object.keys(skills).map((keyName: string, index: number) => {
-            const title = titleize(keyName)
-            const skillGroup = skills[keyName as keyof SkillsData]
-
-            return (
-              <li key={index}>
-                <h3>{title}</h3>
-                <ul className='max-w-3xl pt-4 m-auto flex justify-center items-start flex-wrap'>
-                  {
-                    skillGroup.map((skill: Skill, idx: number) => (
-                      <SkillListItem key={idx} skill={skill} />
-                    ))
-                  }
-                </ul>
-              </li>
-            )
-          })}
+    <section id='skills' className='py-24'>
+      <div className='max-w-screen-xl w-full mx-auto px-4 text-center'>
+        <h2 className='text-4xl font-bold mb-24'>Skills</h2>
+        <ul className='grid grid-cols-1 sm:grid-cols-2 gap-16'>
+          {Object.entries(skills).map(([key, skillGroup], index) => (
+            <li key={index}>
+              <h3 className='text-xl font-semibold mb-6'>{titleize(key)}</h3>
+              <ul className='flex flex-wrap justify-center gap-6'>
+                {skillGroup.map((skill: Skill) => (
+                  <SkillListItem key={skill.key} skill={skill} />
+                ))}
+              </ul>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
