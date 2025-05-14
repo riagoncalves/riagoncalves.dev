@@ -1,3 +1,4 @@
+export * from './Hero'
 export * from './ContactsWidget'
 export * from './ContactWidgetItem'
 export * from './Header'

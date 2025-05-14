@@ -6,6 +6,10 @@ interface Props {
 }
 
 export const ContactWidgetItem: React.FC<Props> = ({ contact }: Props) => {
+  if (!contact.active) {
+    return null
+  }
+
   return (
     <li className='w-8 transition-scale m-2'>
       <a href={contact.link} target='_blank' rel='noreferrer' className='flex'>
@@ -20,4 +24,4 @@ export const ContactWidgetItem: React.FC<Props> = ({ contact }: Props) => {
       </a>
     </li>
   )
-}
+};
