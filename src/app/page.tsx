@@ -1,10 +1,10 @@
 'use client'
 
-import { Hero, ContactsWidget, Header, Footer, ProjectsList, SkillsList } from "@/components";
+import { Hero, ContactsWidget, Header, Footer, ProjectsList, SkillsList, CompanyExperience } from "@/components";
 import { useHome } from "@/hooks";
 
 export default function Home() {
-  const { projects, skills, contacts } = useHome();
+  const { projects, skills, contacts, experiences } = useHome();
 
   return (
     <div>
@@ -16,6 +16,8 @@ export default function Home() {
         <Hero />
 
         <ProjectsList projects={projects} />
+
+        <CompanyExperience experiences={experiences} />
 
         <SkillsList skills={skills} />
       </main>
