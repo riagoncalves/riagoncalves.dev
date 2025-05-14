@@ -78,11 +78,7 @@ button {
 }
 
 .project-card {
-  @apply px-5 h-96 flex flex-col justify-end max-w-screen-lg bg-cover bg-center relative mb-32 shadow-2xl transition-transform duration-300 hover:scale-105;
-}
-
-.project-card:last-child {
-  @apply mb-0;
+  @apply px-5 h-96 flex flex-col justify-end max-w-screen-lg bg-cover bg-center relative shadow-2xl transition-transform duration-300 hover:scale-105;
 }
 
 .project-card__overlay {
