@@ -11,6 +11,7 @@
     "company": "Minuscode",
     "role": "Software Engineer",
     "period": "2017 – 2021",
+    "location": "Lisbon, Portugal (Hybrid)",
     "description": "Developed a gym streaming platform in Ruby on Rails for personal trainers, enabling live classes and interactive scheduling, with core features like user management and scalable video streaming; also built and customized client-facing websites integrated with WordPress CMS.",
     "technologies": ["Ruby on Rails", "Next.js", "Javascript", "PostgreSQL", "Wordpress"]
   },
@@ -18,6 +19,7 @@
     "company": "Hypatia",
     "role": " Junior Software Engineer",
     "period": "2015",
+    "location": "Lisbon, Portugal",
     "description": "Developed C# scripts for an Augmented Reality project in Unity3D and contributed to multiple Android applications using Java.",
     "technologies": ["C#", "Unity3D", "Java", "Android"]
   }
