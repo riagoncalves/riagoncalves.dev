@@ -3,6 +3,6 @@ export interface Experience {
   role: string
   period: string
   location?: string
-  description: string
+  description?: string
   technologies?: string[]
 }

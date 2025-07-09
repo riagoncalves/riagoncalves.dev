@@ -22,7 +22,9 @@ export const CompanyExperienceItem: React.FC<Props> = ({ experience }) => {
           <p className="text-sm text-gray-400 italic mb-2">{experience.location}</p>
         )}
 
-        <p className="text-gray-300 mb-4">{experience.description}</p>
+        {experience.description && (
+          <p className="text-gray-300 mb-4">{experience.description}</p>
+        )}
 
         {experience.technologies && (
           <div className="flex flex-wrap gap-2">
