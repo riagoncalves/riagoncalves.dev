@@ -1,8 +1,15 @@
 [
   {
+    "company": "Reachdesk",
+    "role": "Back End Engineer",
+    "period": "2025 – Present",
+    "location": "Remote",
+    "technologies": ["Ruby on Rails", "React", "TypeScript", "PostgreSQL"]
+  },
+  {
     "company": "Leafwell",
     "role": "Senior Software Engineer",
-    "period": "2021 – Present",
+    "period": "2021 – 2025",
     "location": "Remote",
     "description": "Contributed to the core product by planning and developing new features in Ruby on Rails, helping migrate the platform to React and GraphQL, and ensuring high quality through unit and end-to-end tests with RSpec, Vitest, and Cypress—all while maintaining a seamless user experience and fast delivery of business needs.",
     "technologies": ["Ruby on Rails", "React", "TypeScript", "PostgreSQL", "AWS"]
