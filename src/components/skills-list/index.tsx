@@ -8,7 +8,7 @@ interface Props {
 
 export const SkillsList: React.FC<Props> = ({ skills }: Props) => {
   return (
-    <section id='skills' className='py-24'>
+    <section id='skills' className='py-20'>
       <div className='max-w-screen-xl w-full mx-auto px-4 text-center'>
         <h2 className='text-4xl font-bold mb-24'>Skills</h2>
         <ul className='grid grid-cols-1 sm:grid-cols-2 gap-16'>

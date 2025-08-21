@@ -13,7 +13,7 @@ export const Hero = () => {
         <div className='flex justify-center items-center'>
             <p className='mt-4 curtain curtain--delayed italic'>
             <span />
-            Nebula Navigator, Engineering Software Beyond the Stars
+            Engineering Software Beyond the Stars
             </p>
         </div>
         <div>
