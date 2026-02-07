@@ -1,4 +1,4 @@
-import { Skill } from '@/types'
+import { Skill } from '@/types';
 
 interface Props {
   skill: Skill
@@ -19,5 +19,5 @@ export const SkillListItem: React.FC<Props> = ({ skill }: Props) => {
       </div>
       <small className='mt-2 text-sm text-gray-200 text-center'>{skill.name}</small>
     </li>
-  )
-}
+  );
+};

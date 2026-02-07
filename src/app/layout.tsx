@@ -1,5 +1,5 @@
 import "./globals.css";
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 import { AnalyticsProvider } from "@/providers/AnalyticsProvider";
 import { montserrat } from "@/utils";
 
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     icon: '/images/favicon.ico'
   },
   metadataBase: new URL('https://riagoncalves.dev')
-}
+};
 
 export default function RootLayout({
   children,

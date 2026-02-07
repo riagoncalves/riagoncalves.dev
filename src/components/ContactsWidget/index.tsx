@@ -1,5 +1,5 @@
-import { Contact } from '@/types'
-import { ContactWidgetItem } from './ContactWidgetItem'
+import { Contact } from '@/types';
+import { ContactWidgetItem } from './ContactWidgetItem';
 
 interface Props {
   contacts: Contact[]
@@ -14,5 +14,5 @@ export const ContactsWidget: React.FC<Props> = ({ contacts }: Props) => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};

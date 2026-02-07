@@ -1,6 +1,6 @@
-import React from 'react'
-import { Experience } from '@/types'
-import { CompanyExperienceItem } from './CompanyExperienceItem'
+import React from 'react';
+import { Experience } from '@/types';
+import { CompanyExperienceItem } from './CompanyExperienceItem';
 
 interface Props {
   experiences: Experience[]
@@ -18,5 +18,5 @@ export const CompanyExperience: React.FC<Props> = ({ experiences }) => {
         </ol>
       </div>
     </section>
-  )
-}
+  );
+};

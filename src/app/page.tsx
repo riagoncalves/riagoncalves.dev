@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Hero, ContactsWidget, Header, Footer, ProjectsList, SkillsList, CompanyExperience } from "@/components";
 import { useHome } from "@/hooks";

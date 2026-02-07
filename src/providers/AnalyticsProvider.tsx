@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useEffect } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
@@ -13,13 +13,13 @@ function Analytics() {
 
   useEffect(() => {
     ReactGA.initialize(GA_ID);
-  }, [])
+  }, []);
 
   useEffect(() => {
     const url = pathname + searchParams.toString();
 
     ReactGA.send({ hitType: 'pageview', page: url });
-  }, [pathname, searchParams])
+  }, [pathname, searchParams]);
 
   return null;
 }
