@@ -1,5 +1,5 @@
-import { Project } from '@/types'
-import { ProjectListItem } from './ProjectListItem'
+import { Project } from '@/types';
+import { ProjectListItem } from './ProjectListItem';
 
 interface Props {
   projects: Project[]
@@ -17,5 +17,5 @@ export const ProjectsList: React.FC<Props> = ({ projects }: Props) => {
         </ul>
       </div>
     </section>
-  )
-}
+  );
+};

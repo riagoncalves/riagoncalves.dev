@@ -1,6 +1,6 @@
-import { titleize } from '@/utils'
-import { Skill, SkillsData } from '@/types'
-import { SkillListItem } from './SkillListItem'
+import { titleize } from '@/utils';
+import { Skill, SkillsData } from '@/types';
+import { SkillListItem } from './SkillListItem';
 
 interface Props {
   skills: SkillsData
@@ -25,5 +25,5 @@ export const SkillsList: React.FC<Props> = ({ skills }: Props) => {
         </ul>
       </div>
     </section>
-  )
-}
+  );
+};

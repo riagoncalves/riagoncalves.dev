@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import { Contact } from '@/types'
+import Image from 'next/image';
+import { Contact } from '@/types';
 
 interface Props {
   contact: Contact
@@ -7,7 +7,7 @@ interface Props {
 
 export const ContactWidgetItem: React.FC<Props> = ({ contact }: Props) => {
   if (!contact.active) {
-    return null
+    return null;
   }
 
   return (
@@ -23,5 +23,5 @@ export const ContactWidgetItem: React.FC<Props> = ({ contact }: Props) => {
         </div>
       </a>
     </li>
-  )
+  );
 };

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Experience } from '@/types'
+import React from 'react';
+import { Experience } from '@/types';
 
 interface Props {
   experience: Experience
@@ -40,5 +40,5 @@ export const CompanyExperienceItem: React.FC<Props> = ({ experience }) => {
         )}
       </div>
     </li>
-  )
-}
+  );
+};

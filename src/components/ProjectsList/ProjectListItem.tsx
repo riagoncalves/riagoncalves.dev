@@ -1,4 +1,4 @@
-import { Project } from '@/types'
+import { Project } from '@/types';
 
 interface Props {
   project: Project
@@ -46,5 +46,5 @@ export const ProjectListItem: React.FC<Props> = ({ project }: Props) => {
       </div>
       <span className='project-card__overlay' />
     </li>
-  )
-}
+  );
+};

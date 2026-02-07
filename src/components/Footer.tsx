@@ -1,9 +1,9 @@
-'use client'
+'use client';
 
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import { Contact } from '@/types'
-import { scrollTo } from '@/utils'
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { Contact } from '@/types';
+import { scrollTo } from '@/utils';
 
 interface Props {
   contacts: Contact[]
@@ -14,7 +14,7 @@ export const Footer: React.FC<Props> = ({ contacts }: Props) => {
 
   useEffect(() => {
     setCurrentYear(new Date().getFullYear().toString());
-  }, [])
+  }, []);
 
   return (
     <footer className='bg-secondary text-gray-300 py-12'>
@@ -46,5 +46,5 @@ export const Footer: React.FC<Props> = ({ contacts }: Props) => {
         </small>
       </div>
     </footer>
-  )
-}
+  );
+};

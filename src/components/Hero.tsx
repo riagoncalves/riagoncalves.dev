@@ -1,4 +1,4 @@
-import { scrollTo } from '@/utils'
+import { scrollTo } from '@/utils';
 
 export const Hero = () => {
   return (
@@ -24,5 +24,5 @@ export const Hero = () => {
       </div>
       <span className='space' />
     </section>
-  )
+  );
 };
