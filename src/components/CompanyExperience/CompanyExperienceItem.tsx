@@ -1,42 +1,47 @@
 import React from 'react';
 import { Experience } from '@/types';
+import { TechList } from '@/components/TechList';
 
 interface Props {
   experience: Experience
+  isCurrent: boolean
+  isLast: boolean
 }
 
-export const CompanyExperienceItem: React.FC<Props> = ({ experience }) => {
+export const CompanyExperienceItem: React.FC<Props> = ({ experience, isCurrent, isLast }) => {
   return (
-    <li className="ml-4 group">
-      <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-1.5 top-1.5"></div>
-
-      <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl transition-all group-hover:border-blue-500 group-hover:shadow-md">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-          <h3 className="text-xl font-semibold text-white">
-            {experience.role} <span className="text-blue-400">@ {experience.company}</span>
-          </h3>
-          <span className="text-sm text-gray-400">{experience.period}</span>
+    <li className='flex gap-6'>
+      <div className='flex flex-col items-center shrink-0'>
+        <div className='relative mt-1 shrink-0'>
+          {isCurrent && (
+            <span className='absolute -inset-1.5 rounded-full bg-blue-400/30 animate-ping' />
+          )}
+          <div className={`w-3 h-3 rounded-full border-2 border-blue-400 relative z-10 ${isCurrent ? 'bg-blue-400' : 'bg-secondary'}`} />
         </div>
+        {!isLast && <div className='w-px flex-1 bg-white/10 mt-2' />}
+      </div>
+
+      <div className='flex-1 pb-12'>
+        <span className='text-xs font-mono text-blue-400/70 tracking-widest'>{experience.period}</span>
+
+        <h3 className='text-xl font-semibold text-white mt-1'>
+          {experience.role}{' '}
+          {experience.website
+            ? <a href={experience.website} target='_blank' rel='noreferrer' className='!text-blue-400 hover:underline'>@ {experience.company}</a>
+            : <span className='text-blue-400'>@ {experience.company}</span>
+          }
+        </h3>
 
         {experience.location && (
-          <p className="text-sm text-gray-400 italic mb-2">{experience.location}</p>
+          <p className='text-sm text-gray-500 mt-1'>{experience.location}</p>
         )}
 
         {experience.description && (
-          <p className="text-gray-300 mb-4">{experience.description}</p>
+          <p className='text-gray-300 leading-relaxed mt-4'>{experience.description}</p>
         )}
 
         {experience.technologies && (
-          <div className="flex flex-wrap gap-2">
-            {experience.technologies.map((tech, i) => (
-              <span
-                key={i}
-                className="text-sm bg-white/10 text-white px-3 py-1 rounded-full border border-white/10 hover:bg-blue-600/30 transition"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+          <TechList technologies={experience.technologies} className='mt-5' />
         )}
       </div>
     </li>
