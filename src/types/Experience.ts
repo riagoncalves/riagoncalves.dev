@@ -5,4 +5,5 @@ export interface Experience {
   location?: string
   description?: string
   technologies?: string[]
+  website?: string | null
 }

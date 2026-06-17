@@ -1,5 +1,6 @@
 import { Project } from '@/types';
 import { GitHubIcon, ExternalLinkIcon } from '@/components/icons';
+import { TechList } from '@/components/TechList';
 
 interface Props {
   project: Project
@@ -47,16 +48,7 @@ export const ProjectListItem: React.FC<Props> = ({ project, index }: Props) => {
         {project.description}
       </p>
 
-      <div className='flex flex-wrap gap-2 pt-2'>
-        {project.technologies.map((tech) => (
-          <span
-            key={tech}
-            className='text-xs px-3 py-1 bg-white/10 text-white/70 rounded-full border border-white/10 hover:bg-blue-600/30 transition'
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
+      <TechList technologies={project.technologies} className='pt-2' />
     </li>
   );
 };
