@@ -10,7 +10,10 @@ export const SkillsList: React.FC<Props> = ({ skills }: Props) => {
   return (
     <section id='skills' className='py-20'>
       <div className='max-w-screen-xl w-full mx-auto px-4 text-center'>
-        <h2 className='text-4xl font-bold mb-24'>Skills</h2>
+        <div className='text-center mb-16'>
+          <h2 className='text-4xl font-bold mb-4'>Skills</h2>
+          <p className='text-gray-400'>Technologies and tools I work with</p>
+        </div>
         <ul className='grid grid-cols-1 sm:grid-cols-2 gap-16'>
           {Object.entries(skills).map(([key, skillGroup], index) => (
             <li key={index}>
