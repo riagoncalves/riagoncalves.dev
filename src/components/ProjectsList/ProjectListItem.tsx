@@ -1,50 +1,62 @@
 import { Project } from '@/types';
+import { GitHubIcon, ExternalLinkIcon } from '@/components/icons';
 
 interface Props {
   project: Project
+  index: number
 }
 
-export const ProjectListItem: React.FC<Props> = ({ project }: Props) => {
+export const ProjectListItem: React.FC<Props> = ({ project, index }: Props) => {
   return (
-    <li
-      key={project.key}
-      className='project-card'
-      style={
-        {
-          backgroundImage: `url(/images/projects/${project.key}.jpg)`
-        }
-      }
-    >
-      <div className='z-10 relative text-left sm:pr-24 pb-8'>
-        <h3>{project.name}</h3>
-        <div className='pt-8'>
-          <p>{project.description}</p>
-          <small><strong>Technologies:</strong> {project.technologies.join(', ')}</small>
-        </div>
-        <div className='pt-4'>
-          {project.website !== null && project.website !== '' && (
-            <a
-              href={project.website}
-              target='_blank'
-              rel='noreferrer'
-              className='inline-block mt-4 px-4 py-2 mr-4 bg-main text-white rounded-lg hover:scale-105 transition'
-            >
-              Visit Website
-            </a>
-          )}
-          {project.github !== null && project.github !== '' && (
+    <li className='group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col gap-4 hover:border-blue-500 hover:shadow-[0_0_24px_rgba(59,130,246,0.08)] transition-all duration-300'>
+      <div className='flex items-start justify-between'>
+        <span className='font-mono text-xs font-semibold tracking-widest text-blue-400/70'>
+          {String(index + 1).padStart(2, '0')}
+        </span>
+        <div className='flex gap-3'>
+          {project.github && (
             <a
               href={project.github}
               target='_blank'
               rel='noreferrer'
-              className='inline-block mt-4 px-4 py-2 bg-main text-white rounded-lg hover:scale-105 transition'
+              aria-label='View repository'
+              className='text-white/40 hover:text-white transition-colors duration-200'
             >
-              View Repository
+              <GitHubIcon />
+            </a>
+          )}
+          {project.website && (
+            <a
+              href={project.website}
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Visit website'
+              className='text-white/40 hover:text-white transition-colors duration-200'
+            >
+              <ExternalLinkIcon />
             </a>
           )}
         </div>
       </div>
-      <span className='project-card__overlay' />
+
+      <h3 className='text-lg font-semibold text-white group-hover:text-blue-300 transition-colors duration-200'>
+        {project.name}
+      </h3>
+
+      <p className='text-sm text-gray-400 leading-relaxed flex-1'>
+        {project.description}
+      </p>
+
+      <div className='flex flex-wrap gap-2 pt-2'>
+        {project.technologies.map((tech) => (
+          <span
+            key={tech}
+            className='text-xs px-3 py-1 bg-white/10 text-white/70 rounded-full border border-white/10 hover:bg-blue-600/30 transition'
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
     </li>
   );
 };

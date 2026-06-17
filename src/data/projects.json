@@ -1,11 +1,35 @@
 [
   {
+    "key": "playcatalog",
+    "name": "PlayCatalog",
+    "description": "A gaming platform to manage your game library, track progress, and discover new favorites. Combines personal collection management with social features and recommendations.",
+    "technologies": ["Ruby on Rails", "PostgreSQL", "Sidekiq", "Docker", "TailwindCSS"],
+    "website": "https://playcatalog.net/",
+    "github": null
+  },
+  {
+    "key": "lumea",
+    "name": "Lumea",
+    "description": "A medical appointment management system built on a microservices architecture. Seven specialized services handle appointments, patient records, communications, video calls, and more — each with its own isolated PostgreSQL database.",
+    "technologies": ["Ruby on Rails", "PostgreSQL", "Sidekiq", "Docker"],
+    "website": null,
+    "github": "https://github.com/riagoncalves/lumea"
+  },
+  {
     "key": "riagoncalvesv2",
-    "name": "riagoncalves.dev - Version 2",
+    "name": "riagoncalves.dev v2.0",
     "description": "The second version of my personal website. It's a portfolio website that showcases my projects, skills, and experience.",
     "technologies": ["NextJs", "TailwindCSS", "TypeScript"],
     "website": null,
     "github": "https://github.com/riagoncalves/riagoncalves.dev"
+  },
+  {
+    "key": "web-rdf-editor",
+    "name": "Web RDF Editor",
+    "description": "A high-performance web editor for viewing and managing RDF graphs and proprietary binary data tables. Features real-time cell editing, schema-driven binary parsing, and virtualized rendering for thousands of rows.",
+    "technologies": ["React", "TypeScript", "Vite", "TanStack", "TailwindCSS"],
+    "website": null,
+    "github": "https://github.com/riagoncalves/web-rdf-editor"
   },
   {
     "key": "bot",
@@ -17,7 +41,7 @@
   },
   {
     "key": "riagoncalvesv1",
-    "name": "riagoncalves.dev - Version 1",
+    "name": "riagoncalves.dev v1.0",
     "description": "The first version of my personal website. It was a simple website that I created to showcase my projects and skills.",
     "technologies": ["Ruby on Rails", "PostgreSQL"],
     "website": null,
@@ -30,13 +54,5 @@
     "technologies": ["NextJs"],
     "website": "https://sarcastify.riagoncalves.dev/",
     "github": "https://github.com/riagoncalves/sarcastify"
-  },
-  {
-    "key": "transfer",
-    "name": "Transfer - Website Theme",
-    "description": "Transfer is a simple and clean website theme that I created to practice my web development skills. It's a responsive theme that can be used for a variety of purposes.",
-    "technologies": ["HTML", "CSS", "JavaScript", "Gulp"],
-    "website": "https://transfer-template.netlify.app/",
-    "github": "https://github.com/riagoncalves/transfer-website-theme"
   }
 ]

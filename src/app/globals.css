@@ -77,17 +77,6 @@ button {
     fadeIn .5s ease .9s forwards;
 }
 
-.project-card {
-  @apply px-5 h-96 flex flex-col justify-end max-w-screen-lg bg-cover bg-center relative shadow-2xl transition-transform duration-300 hover:scale-105;
-}
-
-.project-card__overlay {
-  @apply absolute bg-black w-full h-full top-0 left-0 opacity-50 z-0 transition-opacity duration-300;
-}
-
-.project-card:hover .project-card__overlay {
-  @apply opacity-70;
-}
 
 @keyframes curtain {
   from { width: 100% }
