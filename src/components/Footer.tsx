@@ -17,7 +17,7 @@ export const Footer: React.FC<Props> = ({ contacts }: Props) => {
   }, []);
 
   return (
-    <footer className='bg-secondary text-gray-300 py-12'>
+    <footer className='bg-primary text-gray-300 py-12'>
       <div className='max-w-screen-lg mx-auto flex flex-col items-center px-4'>
         <button onClick={scrollTo('intro')} className='transition-transform transform hover:scale-110'>
           <div className='relative w-16 h-16'>

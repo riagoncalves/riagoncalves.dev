@@ -6,3 +6,5 @@ export * from './ProjectsList';
 export * from './SkillsList';
 export * from './CompanyExperience';
 export * from './TechList';
+export * from './ScrollToTop';
+export * from './ContactForm';
