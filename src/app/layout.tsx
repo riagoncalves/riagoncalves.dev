@@ -3,43 +3,51 @@ import type { Metadata } from 'next';
 import { AnalyticsProvider } from "@/providers/AnalyticsProvider";
 import { montserrat } from "@/utils";
 
+const description = 'Software Engineer with 10+ years building scalable web applications. Specialising in Ruby on Rails and React. Currently Back End Engineer at Reachdesk.';
+
 export const metadata: Metadata = {
   title: {
     default: 'Ricardo Gonçalves | Software Engineer',
-    template: '%s | Ricardo Gonçalves | Software Engineer'
+    template: '%s | Ricardo Gonçalves'
   },
-  description: 'Passionate Software Engineer',
+  description,
   keywords: [
-    'HTML',
-    'CSS',
+    'Ricardo Gonçalves',
+    'Software Engineer',
+    'Back End Engineer',
     'Ruby on Rails',
     'React',
-    'JavaScript',
     'TypeScript',
+    'JavaScript',
+    'Next.js',
     'PostgreSQL',
+    'Docker',
     'web development',
-    'software engineering'
+    'remote engineer',
   ],
   authors: [{ name: 'Ricardo Gonçalves', url: 'https://riagoncalves.dev' }],
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Ricardo Gonçalves | Software Engineer',
-    description: 'Passionate Software Engineer',
+    description,
     url: 'https://riagoncalves.dev',
-    siteName: 'Ricardo Gonçalves | Software Engineer',
+    siteName: 'Ricardo Gonçalves',
     images: [
       {
         url: '/images/thumbnail.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ricardo Gonçalves'
+        alt: 'Ricardo Gonçalves — Software Engineer'
       }
     ],
-    type: 'website'
+    type: 'website',
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ricardo Gonçalves | Software Engineer',
-    description: 'Passionate Software Engineer',
+    description,
+    creator: '@at_riagoncalves',
     images: ['/images/thumbnail.jpg']
   },
   icons: {
