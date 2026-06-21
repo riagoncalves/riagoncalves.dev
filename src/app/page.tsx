@@ -1,6 +1,6 @@
 'use client';
 
-import { Hero, ContactsWidget, Header, Footer, ProjectsList, SkillsList, CompanyExperience, ScrollToTop, ContactForm } from "@/components";
+import { Hero, Header, Footer, ProjectsList, SkillsList, CompanyExperience, ScrollToTop, ContactForm } from "@/components";
 import { useHome } from "@/hooks";
 
 export default function Home() {
@@ -11,8 +11,6 @@ export default function Home() {
       <Header />
 
       <main>
-        <ContactsWidget contacts={contacts} />
-
         <Hero />
 
         <ProjectsList projects={projects} />
