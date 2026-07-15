@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from 'next';
 import { AnalyticsProvider } from "@/providers/AnalyticsProvider";
+import { NetlifyIdentityRedirect } from "@/components/NetlifyIdentityRedirect";
 import { montserrat } from "@/utils";
 
 const description = 'Software Engineer with 10+ years building scalable web applications. Specialising in Ruby on Rails and React. Currently Back End Engineer at Reachdesk.';
@@ -67,6 +68,7 @@ export default function RootLayout({
         className={`${montserrat.className} w-full p-0 m-0 bg-main antialiased`}
       >
         <AnalyticsProvider />
+        <NetlifyIdentityRedirect />
         {children}
       </body>
     </html>
