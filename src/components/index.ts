@@ -7,3 +7,4 @@ export * from './CompanyExperience';
 export * from './TechList';
 export * from './ScrollToTop';
 export * from './ContactForm';
+export * from './BlogPostList';
