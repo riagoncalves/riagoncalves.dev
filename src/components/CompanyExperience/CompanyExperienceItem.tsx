@@ -1,47 +1,49 @@
 import React from 'react';
-import { Experience } from '@/types';
-import { TechList } from '@/components/TechList';
+import { Experience, Locale } from '@/types';
+import { localize } from '@/utils';
+import { ChipList } from '@/components/ChipList';
 
 interface Props {
   experience: Experience
   isCurrent: boolean
   isLast: boolean
+  locale: Locale
 }
 
-export const CompanyExperienceItem: React.FC<Props> = ({ experience, isCurrent, isLast }) => {
+export const CompanyExperienceItem: React.FC<Props> = ({ experience, isCurrent, isLast, locale }) => {
   return (
     <li className='flex gap-6'>
       <div className='flex flex-col items-center shrink-0'>
-        <div className='relative mt-1 shrink-0'>
+        <div className='relative mt-1.5 shrink-0'>
           {isCurrent && (
-            <span className='absolute -inset-1.5 rounded-full bg-blue-400/30 animate-ping' />
+            <span className='absolute -inset-1.5 rotate-45 bg-neon-pink/40 animate-ping' />
           )}
-          <div className={`w-3 h-3 rounded-full border-2 border-blue-400 relative z-10 ${isCurrent ? 'bg-blue-400' : 'bg-secondary'}`} />
+          <div className={`w-3 h-3 rotate-45 border-2 relative z-10 ${isCurrent ? 'border-neon-pink bg-neon-pink shadow-[0_0_12px_rgba(255,42,109,0.8)]' : 'border-neon-cyan/70 bg-secondary'}`} />
         </div>
-        {!isLast && <div className='w-px flex-1 bg-white/10 mt-2' />}
+        {!isLast && <div className='w-px flex-1 bg-linear-to-b from-neon-cyan/50 to-neon-cyan/5 mt-2' />}
       </div>
 
       <div className='flex-1 pb-12'>
-        <span className='text-xs font-mono text-blue-400/70 tracking-widest'>{experience.period}</span>
+        <span className='font-mono text-sm text-neon-yellow tracking-widest'>{localize(experience.period, locale)}</span>
 
-        <h3 className='text-xl font-semibold text-white mt-1'>
-          {experience.role}{' '}
+        <h3 className='text-lg sm:text-xl text-white mt-1'>
+          {localize(experience.role, locale)}{' '}
           {experience.website
-            ? <a href={experience.website} target='_blank' rel='noreferrer' className='!text-blue-400 hover:underline'>@ {experience.company}</a>
-            : <span className='text-blue-400'>@ {experience.company}</span>
+            ? <a href={experience.website} target='_blank' rel='noreferrer' className='text-neon-cyan! hover:neon-text-cyan transition'>@ {experience.company}</a>
+            : <span className='text-neon-cyan'>@ {experience.company}</span>
           }
         </h3>
 
         {experience.location && (
-          <p className='text-sm text-gray-500 mt-1'>{experience.location}</p>
+          <p className='font-mono text-sm text-gray-500 mt-1'>{localize(experience.location, locale)}</p>
         )}
 
         {experience.description && (
-          <p className='text-gray-300 leading-relaxed mt-4'>{experience.description}</p>
+          <p className='text-gray-300 leading-relaxed mt-4'>{localize(experience.description, locale)}</p>
         )}
 
         {experience.technologies && (
-          <TechList technologies={experience.technologies} className='mt-5' />
+          <ChipList items={experience.technologies} className='mt-5' />
         )}
       </div>
     </li>

@@ -4,3 +4,15 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Plain-text and feed files for search engines and AI crawlers: make sure
+# accented characters (ç, ã, é) are decoded as UTF-8.
+[[headers]]
+  for = "/llms*.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/*rss.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=utf-8"

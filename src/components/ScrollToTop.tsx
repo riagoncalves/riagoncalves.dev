@@ -3,8 +3,14 @@
 import { useEffect, useState } from 'react';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { Locale } from '@/types';
+import { getDictionary, scrollToTop } from '@/utils';
 
-export const ScrollToTop = () => {
+interface Props {
+  locale: Locale
+}
+
+export const ScrollToTop: React.FC<Props> = ({ locale }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -20,19 +26,20 @@ export const ScrollToTop = () => {
       }`}
     >
       <Fab
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        onClick={scrollToTop}
         size='medium'
-        aria-label='Scroll to top'
+        aria-label={getDictionary(locale).common.scrollToTop}
         sx={{
-          backgroundColor: 'rgba(255,255,255,0.08)',
-          border: '1px solid rgba(255,255,255,0.15)',
-          backdropFilter: 'blur(8px)',
-          color: 'white',
-          boxShadow: 'none',
+          backgroundColor: 'rgba(7,5,13,0.85)',
+          border: '1px solid rgba(0,240,255,0.5)',
+          borderRadius: 0,
+          color: 'var(--color-neon-cyan)',
+          boxShadow: '0 0 12px rgba(0,240,255,0.2)',
           '&:hover': {
-            backgroundColor: 'rgba(59,130,246,0.25)',
-            borderColor: 'rgba(96,165,250,0.5)',
-            boxShadow: '0 0 20px rgba(59,130,246,0.2)',
+            backgroundColor: 'var(--color-neon-cyan)',
+            borderColor: 'var(--color-neon-cyan)',
+            color: '#000',
+            boxShadow: '0 0 24px rgba(0,240,255,0.6)',
           },
         }}
       >

@@ -1,19 +1,24 @@
 'use client';
 
+import { SectionHeading } from '@/components/SectionHeading';
 import { InputField } from './components/InputField';
 import { TextAreaField } from './components/TextAreaField';
 import { useContactForm } from './hooks/useContactForm';
+import { Locale } from '@/types';
+import { getDictionary } from '@/utils';
 
-export const ContactForm = () => {
+interface Props {
+  locale: Locale
+}
+
+export const ContactForm: React.FC<Props> = ({ locale }) => {
   const { formData, status, handleChange, handleSubmit } = useContactForm();
+  const t = getDictionary(locale);
 
   return (
     <section id='contact' className='bg-secondary py-20'>
       <div className='max-w-2xl w-full mx-auto px-4'>
-        <div className='text-center mb-16'>
-          <h2 className='text-4xl font-bold mb-4'>Get in Touch</h2>
-          <p className='text-gray-400'>Have a project in mind or just want to say hi?</p>
-        </div>
+        <SectionHeading index={4} title={t.contact.title} subtitle={t.contact.subtitle} />
 
         <form
           name='contact'
@@ -21,37 +26,37 @@ export const ContactForm = () => {
           data-netlify='true'
           data-netlify-honeypot='bot-field'
           onSubmit={handleSubmit}
-          className='flex flex-col gap-5'
+          className='hud-frame flex flex-col gap-5 p-6 sm:p-8 bg-main/60 border border-neon-cyan/15'
         >
           <input type='hidden' name='form-name' value='contact' />
           <p className='hidden'><input name='bot-field' /></p>
 
-          <InputField id='name' type='text' name='name' label='Name' value={formData.name} onChange={handleChange} placeholder='Ricardo Gonçalves' required />
-          <InputField id='email' type='email' name='email' label='Email' value={formData.email} onChange={handleChange} placeholder='hello@example.com' required />
-          <TextAreaField id='message' name='message' label='Message' value={formData.message} onChange={handleChange} placeholder="What's on your mind?" required rows={5} />
+          <InputField id='name' type='text' name='name' label={t.contact.nameLabel} value={formData.name} onChange={handleChange} placeholder={t.contact.namePlaceholder} required />
+          <InputField id='email' type='email' name='email' label={t.contact.emailLabel} value={formData.email} onChange={handleChange} placeholder={t.contact.emailPlaceholder} required />
+          <TextAreaField id='message' name='message' label={t.contact.messageLabel} value={formData.message} onChange={handleChange} placeholder={t.contact.messagePlaceholder} required rows={5} />
 
           {status === 'invalid' && (
-            <p className='text-red-400 text-sm text-center'>
-              Please fill in your name, email and message.
+            <p className='font-mono text-neon-pink text-sm text-center'>
+              {t.contact.invalid}
             </p>
           )}
           {status === 'success' && (
-            <p className='text-emerald-400 text-sm text-center'>
-              Message sent! I&apos;ll get back to you soon.
+            <p className='font-mono text-neon-green text-sm text-center'>
+              {t.contact.success}
             </p>
           )}
           {status === 'error' && (
-            <p className='text-red-400 text-sm text-center'>
-              Something went wrong. Please try again.
+            <p className='font-mono text-neon-pink text-sm text-center'>
+              {t.contact.error}
             </p>
           )}
 
           <button
             type='submit'
             disabled={status === 'sending'}
-            className='mt-2 px-6 py-3 bg-white text-black font-bold hover:bg-blue-400 hover:text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed'
+            className='btn-neon mt-2'
           >
-            {status === 'sending' ? 'Sending...' : 'Send Message'}
+            {status === 'sending' ? t.contact.sending : t.contact.submit}
           </button>
         </form>
       </div>

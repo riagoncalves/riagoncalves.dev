@@ -1,49 +1,44 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Post } from '@/types';
-import { formatDate } from '@/utils';
+import { Locale, Post } from '@/types';
+import { formatDate, getDictionary, postPath } from '@/utils';
+import { ChipList } from '@/components/ChipList';
+import { ArrowIcon } from '@/components/icons';
 
 interface Props {
   post: Post
+  locale: Locale
 }
 
-export const BlogPostListItem: React.FC<Props> = ({ post }: Props) => {
+export const BlogPostListItem: React.FC<Props> = ({ post, locale }) => {
+  const t = getDictionary(locale);
+
   return (
-    <li className='group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-blue-500/60 hover:bg-white/[0.07] hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(59,130,246,0.12)] transition-all duration-300'>
-      <Link href={`/blog/${post.slug}`} className='flex flex-col gap-3 p-6'>
+    <li className='hud-frame group bg-secondary/80 backdrop-blur-sm border border-neon-cyan/15 hover:border-neon-cyan/50 hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(0,240,255,0.12)] transition-all duration-300'>
+      <Link href={postPath(post)} className='flex flex-col gap-3 p-6'>
         {post.cover && (
-          <div className='relative aspect-video -mt-6 -mx-6 mb-2 w-[calc(100%+3rem)]'>
+          <div className='relative aspect-video -mt-6 -mx-6 mb-2 w-[calc(100%+3rem)] overflow-hidden'>
             <Image src={post.cover} alt='' fill className='object-cover' />
           </div>
         )}
 
-        <span className='font-mono text-xs font-semibold tracking-widest text-blue-400/70'>
-          {formatDate(post.date)}
+        <span className='font-mono text-sm tracking-widest text-neon-yellow'>
+          {formatDate(post.date, locale)}
         </span>
 
-        <h3 className='text-lg font-semibold text-white group-hover:text-blue-300 transition-colors duration-200'>
+        <h3 className='text-lg text-white group-hover:text-neon-cyan group-hover:neon-text-cyan transition-colors duration-200'>
           {post.title}
         </h3>
 
-        <p className='text-sm text-gray-400 leading-relaxed'>
+        <p className='text-base text-gray-400 leading-relaxed'>
           {post.description}
         </p>
 
-        {post.tags.length > 0 && (
-          <ul className='flex flex-wrap gap-2 pt-1'>
-            {post.tags.map((tag) => (
-              <li key={tag} className='text-xs font-medium text-gray-400 bg-white/5 border border-white/10 rounded-full px-3 py-1'>
-                {tag}
-              </li>
-            ))}
-          </ul>
-        )}
+        <ChipList items={post.tags} tone='pink' className='pt-1' />
 
-        <span className='flex items-center gap-1.5 text-sm font-semibold text-blue-400 pt-2'>
-          Read post
-          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' className='w-4 h-4 transition-transform duration-200 group-hover:translate-x-1' aria-hidden='true'>
-            <path strokeLinecap='round' strokeLinejoin='round' d='M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3' />
-          </svg>
+        <span className='flex items-center gap-1.5 font-mono text-sm uppercase tracking-widest text-neon-cyan pt-2'>
+          {t.blog.readPost}
+          <ArrowIcon direction='right' className='w-4 h-4 transition-transform duration-200 group-hover:translate-x-1' />
         </span>
       </Link>
     </li>

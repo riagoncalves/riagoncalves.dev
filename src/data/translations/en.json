@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Ricardo Gonçalves | Software Engineer",
+    "description": "Software Engineer with 10+ years building scalable web applications. Specialising in Ruby on Rails and React. Currently Senior Software Engineer at Reachdesk.",
+    "ogImageAlt": "Ricardo Gonçalves — Software Engineer",
+    "blogDescription": "Technical posts on software engineering, Ruby on Rails, React and everything in between."
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "experience": "Experience",
+    "skills": "Skills",
+    "blog": "Blog",
+    "curriculum": "Curriculum",
+    "toggleMenu": "Toggle menu",
+    "changeLanguage": "Change language"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Software Engineer",
+    "intro": "I build performant, scalable web applications with Ruby on Rails and React. 10+ years turning complex problems into clean, maintainable solutions.",
+    "primaryCta": "View my work",
+    "secondaryCta": "Get in touch"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Things I've built and launched",
+    "viewRepository": "View repository",
+    "visitWebsite": "Visit website"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "Where I've worked and what I've built"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies and tools I work with",
+    "categories": {
+      "frameworks": "Frameworks",
+      "languages": "Languages",
+      "databases": "Databases",
+      "ai": "AI",
+      "tools": "Tools"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a project in mind or just want to say hi?",
+    "nameLabel": "Name",
+    "namePlaceholder": "Ricardo Gonçalves",
+    "emailLabel": "Email",
+    "emailPlaceholder": "hello@example.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "What's on your mind?",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you soon.",
+    "error": "Something went wrong. Please try again.",
+    "invalid": "Please fill in your name, email and message."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Thoughts, notes and write-ups on software engineering",
+    "emptyTitle": "No posts yet",
+    "emptyDescription": "New articles are on the way — check back soon.",
+    "readPost": "Read post",
+    "backToBlog": "Back to blog",
+    "alsoAvailableIn": "Also available in"
+  },
+  "common": {
+    "scrollToTop": "Scroll to top",
+    "languageName": "English"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "This page doesn't exist or has been moved.",
+    "backHome": "Back to home"
+  }
+}

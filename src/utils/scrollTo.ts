@@ -10,3 +10,4 @@ export const scrollTo = (elementId: string) => {
   };
 };
 
+export const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });

@@ -1,4 +1,5 @@
 import { Label } from './Label';
+import { FIELD_CLASS_NAME } from './fieldClassName';
 
 interface Props {
   id: string
@@ -22,7 +23,7 @@ export const TextAreaField: React.FC<Props> = ({ id, name, label, value, placeho
       required={required}
       rows={rows}
       onChange={onChange}
-      className='bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-600 focus:border-blue-400/50 focus:bg-white/10 focus:outline-none transition-all w-full resize-none'
+      className={`${FIELD_CLASS_NAME} resize-none`}
     />
   </div>
 );
