@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+    "start": "npx serve@latest out",
+    "preview": "yarn build && yarn start",
+    "lint": "eslint ./src",
     "deploy": "yarn build",
-    "lint:fix": "npx eslint --fix ./src",
+    "lint:fix": "eslint --fix ./src",
     "prepare": "husky"
   },
   "dependencies": {
