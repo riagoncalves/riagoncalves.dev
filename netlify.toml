@@ -3,7 +3,7 @@
   publish = "out"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "24"
 
 # Plain-text and feed files for search engines and AI crawlers: make sure
 # accented characters (ç, ã, é) are decoded as UTF-8.

@@ -11,6 +11,8 @@ export const NetlifyIdentityRedirect = () => {
         window.netlifyIdentity?.on('init', (user: unknown) => {
           if (!user) {
             window.netlifyIdentity?.on('login', () => {
+              // /admin/ is the static Decap CMS page, not a Next.js route, so it needs a full page load.
+              // eslint-disable-next-line @next/next/no-location-assign-relative-destination
               document.location.href = '/admin/';
             });
           }
