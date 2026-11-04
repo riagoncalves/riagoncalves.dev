@@ -16,10 +16,30 @@ collections:
     create: true
     delete: true
     slug: "{{slug}}"
-    summary: "{{title}} — {{date}} {{draft}}"
+    summary: "[{{lang}}] {{title}} — {{date}} {{draft}}"
     sortable_fields: ["date", "title"]
+    view_filters:
+      - { label: "English", field: "lang", pattern: "en" }
+      - { label: "Português", field: "lang", pattern: "pt" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - label: "Language"
+        name: "lang"
+        widget: "select"
+        default: "en"
+        options:
+          - { label: "English", value: "en" }
+          - { label: "Português (PT)", value: "pt" }
+        hint: "English posts are listed on /blog, Portuguese posts on /pt/blog."
+      - label: "Translation of"
+        name: "translation"
+        widget: "relation"
+        collection: "posts"
+        value_field: "{{slug}}"
+        search_fields: ["title"]
+        display_fields: ["[{{lang}}] {{title}}"]
+        required: false
+        hint: "Optional. If this post is a translation, pick the original post in the other language. Linking one side is enough: both posts will show a link to each other and the language switcher will jump between them."
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
       - { label: "Description", name: "description", widget: "text", hint: "Shown in the blog list and as the page's meta description." }
       - { label: "Draft", name: "draft", widget: "boolean", default: true, hint: "Keep this on while you're still writing. Turn it off to publish the post." }
