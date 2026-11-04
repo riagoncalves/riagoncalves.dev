@@ -1,9 +1,11 @@
+import { Localized } from './Locale';
+
 export interface Experience {
   company: string
-  role: string
-  period: string
-  location?: string
-  description?: string
+  role: Localized
+  period: Localized
+  location?: Localized
+  description?: Localized
   technologies?: string[]
   website?: string | null
 }

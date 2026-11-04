@@ -4,7 +4,7 @@ interface Props {
 }
 
 export const Label: React.FC<Props> = ({ htmlFor, children }) => (
-  <label htmlFor={htmlFor} className='text-xs font-mono text-blue-400/70 uppercase tracking-widest'>
+  <label htmlFor={htmlFor} className='text-sm font-mono text-neon-pink uppercase tracking-[0.25em]'>
     {children}
   </label>
 );

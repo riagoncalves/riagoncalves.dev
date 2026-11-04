@@ -8,6 +8,8 @@ export interface SkillsData {
   frameworks: Skill[]
   languages: Skill[]
   databases: Skill[]
-  tools: Skill[]
   ai: Skill[]
+  tools: Skill[]
 }
+
+export type SkillCategory = keyof SkillsData;

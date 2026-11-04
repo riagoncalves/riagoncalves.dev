@@ -1,52 +1,51 @@
 'use client';
 
-import { scrollTo } from '@/utils';
-import { AuroraBackground } from './components/AuroraBackground';
+import { Locale } from '@/types';
+import { getDictionary, scrollTo } from '@/utils';
+import { CyberGrid } from './components/CyberGrid';
 
-export const Hero = () => {
+interface Props {
+  locale: Locale
+  name: string
+  // Current employer, shown next to the role.
+  company: string
+}
+
+export const Hero: React.FC<Props> = ({ locale, name, company }) => {
+  const t = getDictionary(locale);
+
   return (
-    <section id='intro' className='relative min-h-screen bg-black flex items-center overflow-hidden'>
-      <div className='max-w-screen-xl w-full mx-auto px-8 2xl:px-0 py-32'>
+    <section id='intro' className='relative min-h-screen bg-main flex items-center overflow-hidden'>
+      <CyberGrid />
 
-        <p className='fade-in animation-delay-200 font-mono text-sm text-blue-400/70 tracking-widest uppercase mb-5'>
-          Hi, I&apos;m
+      <div className='relative z-10 max-w-screen-xl w-full mx-auto px-8 2xl:px-0 py-32'>
+        <p className='fade-in animation-delay-200 cursor-blink font-mono text-sm sm:text-base text-neon-cyan tracking-[0.3em] uppercase mb-5'>
+          {'> '}{t.hero.greeting}
         </p>
 
-        <div className='inline-block'>
-          <h1 className='curtain py-2'>
-            <span />
-            Ricardo Gonçalves
-          </h1>
+        <h1 data-text={name} className='glitch flicker-in py-2 neon-text-pink'>
+          {name}
+        </h1>
+
+        <div className='fade-in animation-delay-500 flex flex-wrap items-center gap-3 mt-4 mb-8 font-display uppercase tracking-widest'>
+          <span className='text-base sm:text-xl text-gray-200 font-medium'>{t.hero.role}</span>
+          <span className='font-mono text-neon-pink'>{'//'}</span>
+          <span className='text-base sm:text-xl text-neon-yellow'>{company}</span>
         </div>
 
-        <div className='fade-in animation-delay-500 flex items-center gap-3 mt-3 mb-8'>
-          <span className='text-xl sm:text-2xl text-gray-300 font-medium'>Software Engineer</span>
-          <span className='w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse shrink-0' />
-          <span className='text-xl sm:text-2xl text-blue-400'>Reachdesk</span>
-        </div>
-
-        <p className='fade-in animation-delay-700 text-gray-400 text-lg leading-relaxed max-w-xl mb-10'>
-          I build performant, scalable web applications with Ruby on Rails and React.
-          10+ years turning complex problems into clean, maintainable solutions.
+        <p className='fade-in animation-delay-700 text-gray-300 text-lg sm:text-xl leading-relaxed max-w-xl mb-10 border-l-2 border-neon-cyan/60 pl-5'>
+          {t.hero.intro}
         </p>
 
         <div className='fade-in animation-delay-1000 flex flex-wrap gap-4'>
-          <button
-            onClick={scrollTo('projects')}
-            className='px-6 py-3 bg-white text-black font-bold hover:bg-blue-400 hover:text-white transition-all duration-200'
-          >
-            View my work
+          <button onClick={scrollTo('projects')} className='btn-neon'>
+            {t.hero.primaryCta}
           </button>
-          <button
-            onClick={scrollTo('contact')}
-            className='px-6 py-3 border border-white/30 text-white font-bold hover:border-blue-400 hover:text-blue-400 transition-all duration-200'
-          >
-            Get in touch
+          <button onClick={scrollTo('contact')} className='btn-neon-outline'>
+            {t.hero.secondaryCta}
           </button>
         </div>
       </div>
-
-      <AuroraBackground />
     </section>
   );
 };

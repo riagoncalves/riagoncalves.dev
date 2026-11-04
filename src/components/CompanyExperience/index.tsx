@@ -1,25 +1,28 @@
 import React from 'react';
-import { Experience } from '@/types';
+import { Experience, Locale } from '@/types';
+import { getDictionary } from '@/utils';
+import { SectionHeading } from '@/components/SectionHeading';
 import { CompanyExperienceItem } from './CompanyExperienceItem';
 
 interface Props {
   experiences: Experience[]
+  locale: Locale
 }
 
-export const CompanyExperience: React.FC<Props> = ({ experiences }) => {
+export const CompanyExperience: React.FC<Props> = ({ experiences, locale }) => {
+  const t = getDictionary(locale);
+
   return (
-    <section id='experience' className="bg-secondary w-full px-4 py-20">
+    <section id='experience' className='bg-secondary w-full px-4 py-20'>
       <div className='max-w-4xl mx-auto'>
-        <div className='text-center mb-16'>
-          <h2 className="text-4xl font-bold mb-4">Experience</h2>
-          <p className='text-gray-400'>Where I&apos;ve worked and what I&apos;ve built</p>
-        </div>
+        <SectionHeading index={2} title={t.experience.title} subtitle={t.experience.subtitle} />
 
         <ol>
           {experiences.map((exp, i) => (
             <CompanyExperienceItem
-              key={i}
+              key={`${exp.company}-${exp.period.en}`}
               experience={exp}
+              locale={locale}
               isCurrent={i === 0}
               isLast={i === experiences.length - 1}
             />

@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Ricardo Gonçalves | Engenheiro de Software",
+    "description": "Engenheiro de Software com mais de 10 anos de experiência a construir aplicações web escaláveis. Especializado em Ruby on Rails e React. Atualmente Engenheiro de Software Sénior na Reachdesk.",
+    "ogImageAlt": "Ricardo Gonçalves — Engenheiro de Software",
+    "blogDescription": "Artigos técnicos sobre engenharia de software, Ruby on Rails, React e tudo o que fica pelo meio."
+  },
+  "nav": {
+    "home": "Início",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "skills": "Competências",
+    "blog": "Blog",
+    "curriculum": "Currículo",
+    "toggleMenu": "Abrir menu",
+    "changeLanguage": "Mudar idioma"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou o",
+    "role": "Engenheiro de Software",
+    "intro": "Construo aplicações web escaláveis e de alto desempenho com Ruby on Rails e React. Mais de 10 anos a transformar problemas complexos em soluções limpas e fáceis de manter.",
+    "primaryCta": "Ver o meu trabalho",
+    "secondaryCta": "Entrar em contacto"
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Coisas que construí e lancei",
+    "viewRepository": "Ver repositório",
+    "visitWebsite": "Visitar website"
+  },
+  "experience": {
+    "title": "Experiência",
+    "subtitle": "Onde trabalhei e o que construí"
+  },
+  "skills": {
+    "title": "Competências",
+    "subtitle": "Tecnologias e ferramentas com que trabalho",
+    "categories": {
+      "frameworks": "Frameworks",
+      "languages": "Linguagens",
+      "databases": "Bases de Dados",
+      "ai": "IA",
+      "tools": "Ferramentas"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Tens um projeto em mente ou só queres dizer olá?",
+    "nameLabel": "Nome",
+    "namePlaceholder": "Ricardo Gonçalves",
+    "emailLabel": "Email",
+    "emailPlaceholder": "ola@exemplo.pt",
+    "messageLabel": "Mensagem",
+    "messagePlaceholder": "Em que estás a pensar?",
+    "submit": "Enviar Mensagem",
+    "sending": "A enviar...",
+    "success": "Mensagem enviada! Respondo em breve.",
+    "error": "Algo correu mal. Por favor, tenta novamente.",
+    "invalid": "Por favor, preenche o teu nome, email e mensagem."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Pensamentos, notas e artigos sobre engenharia de software",
+    "emptyTitle": "Ainda não há artigos",
+    "emptyDescription": "Novos artigos a caminho — volta em breve.",
+    "readPost": "Ler artigo",
+    "backToBlog": "Voltar ao blog",
+    "alsoAvailableIn": "Também disponível em"
+  },
+  "common": {
+    "scrollToTop": "Voltar ao topo",
+    "languageName": "Português"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "description": "Esta página não existe ou foi movida.",
+    "backHome": "Voltar ao início"
+  }
+}

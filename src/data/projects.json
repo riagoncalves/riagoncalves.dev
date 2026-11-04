@@ -2,56 +2,109 @@
   {
     "key": "playcatalog",
     "name": "PlayCatalog",
-    "description": "A gaming platform to manage your game library, track progress, and discover new favorites. Combines personal collection management with social features and recommendations.",
-    "technologies": ["Ruby on Rails", "PostgreSQL", "Sidekiq", "Docker", "TailwindCSS"],
+    "description": {
+      "en": "A gaming platform to manage your game library, track progress, and discover new favorites. Combines personal collection management with social features and recommendations.",
+      "pt": "Uma plataforma de gaming para gerir a tua biblioteca de jogos, acompanhar o progresso e descobrir novos favoritos. Combina a gestão da coleção pessoal com funcionalidades sociais e recomendações."
+    },
+    "technologies": [
+      "Ruby on Rails",
+      "PostgreSQL",
+      "Sidekiq",
+      "Docker",
+      "TailwindCSS"
+    ],
     "website": null,
     "github": null
   },
   {
     "key": "lumea",
     "name": "Lumea",
-    "description": "A medical appointment management system built on a microservices architecture. Seven specialized services handle appointments, patient records, communications, video calls, and more — each with its own isolated PostgreSQL database.",
-    "technologies": ["Ruby on Rails", "PostgreSQL", "Sidekiq", "Docker"],
+    "description": {
+      "en": "A medical appointment management system built on a microservices architecture. Seven specialized services handle appointments, patient records, communications, video calls, and more — each with its own isolated PostgreSQL database.",
+      "pt": "Um sistema de gestão de consultas médicas assente numa arquitetura de microsserviços. Sete serviços especializados tratam das consultas, registos de pacientes, comunicações, videochamadas e mais — cada um com a sua própria base de dados PostgreSQL isolada."
+    },
+    "technologies": [
+      "Ruby on Rails",
+      "PostgreSQL",
+      "Sidekiq",
+      "Docker"
+    ],
     "website": null,
     "github": "https://github.com/riagoncalves/lumea"
   },
   {
     "key": "riagoncalvesv2",
     "name": "riagoncalves.dev v2.0",
-    "description": "The second version of my personal website. It's a portfolio website that showcases my projects, skills, and experience.",
-    "technologies": ["NextJs", "TailwindCSS", "TypeScript"],
+    "description": {
+      "en": "The second version of my personal website. It's a portfolio website that showcases my projects, skills, and experience.",
+      "pt": "A segunda versão do meu website pessoal. É um portefólio que apresenta os meus projetos, competências e experiência."
+    },
+    "technologies": [
+      "NextJs",
+      "TailwindCSS",
+      "TypeScript"
+    ],
     "website": null,
     "github": "https://github.com/riagoncalves/riagoncalves.dev"
   },
   {
     "key": "web-rdf-editor",
     "name": "Web RDF Editor",
-    "description": "A high-performance web editor for viewing and managing RDF graphs and proprietary binary data tables. Features real-time cell editing, schema-driven binary parsing, and virtualized rendering for thousands of rows.",
-    "technologies": ["React", "TypeScript", "Vite", "TanStack", "TailwindCSS"],
+    "description": {
+      "en": "A high-performance web editor for viewing and managing RDF graphs and proprietary binary data tables. Features real-time cell editing, schema-driven binary parsing, and virtualized rendering for thousands of rows.",
+      "pt": "Um editor web de alto desempenho para visualizar e gerir grafos RDF e tabelas de dados binários proprietárias. Inclui edição de células em tempo real, parsing binário orientado por esquema e renderização virtualizada para milhares de linhas."
+    },
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "TanStack",
+      "TailwindCSS"
+    ],
     "website": null,
     "github": "https://github.com/riagoncalves/web-rdf-editor"
   },
   {
     "key": "bot",
     "name": "Shinobu - Discord Bot",
-    "description": "Shinobu is a Discord bot that provides a variety of features to enhance your Discord server. It includes features like moderation, music, fun, and more.",
-    "technologies": ["NextJs", "DiscordJS", "Express", "PostgreSQL", "TailwindCSS"],
+    "description": {
+      "en": "Shinobu is a Discord bot that provides a variety of features to enhance your Discord server. It includes features like moderation, music, fun, and more.",
+      "pt": "O Shinobu é um bot de Discord que oferece várias funcionalidades para melhorar o teu servidor, incluindo moderação, música, diversão e muito mais."
+    },
+    "technologies": [
+      "NextJs",
+      "DiscordJS",
+      "Express",
+      "PostgreSQL",
+      "TailwindCSS"
+    ],
     "website": null,
     "github": "https://github.com/riagoncalves/shinobu"
   },
   {
     "key": "riagoncalvesv1",
     "name": "riagoncalves.dev v1.0",
-    "description": "The first version of my personal website. It was a simple website that I created to showcase my projects and skills.",
-    "technologies": ["Ruby on Rails", "PostgreSQL"],
+    "description": {
+      "en": "The first version of my personal website. It was a simple website that I created to showcase my projects and skills.",
+      "pt": "A primeira versão do meu website pessoal. Era um website simples que criei para mostrar os meus projetos e competências."
+    },
+    "technologies": [
+      "Ruby on Rails",
+      "PostgreSQL"
+    ],
     "website": null,
     "github": "https://github.com/riagoncalves/riagoncalves_website_v1"
   },
   {
     "key": "sarcastify",
     "name": "Sarcastify - Text to Sarcastic Text Converter",
-    "description": "Sarcastify is a simple web app that converts text to sarcastic text. It's a fun project that I created to practice my web development skills.",
-    "technologies": ["NextJs"],
+    "description": {
+      "en": "Sarcastify is a simple web app that converts text to sarcastic text. It's a fun project that I created to practice my web development skills.",
+      "pt": "O Sarcastify é uma aplicação web simples que converte texto em texto sarcástico. É um projeto divertido que criei para praticar as minhas competências de desenvolvimento web."
+    },
+    "technologies": [
+      "NextJs"
+    ],
     "website": "https://sarcastify.riagoncalves.dev/",
     "github": "https://github.com/riagoncalves/sarcastify"
   }

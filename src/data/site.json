@@ -1,0 +1,25 @@
+{
+  "url": "https://riagoncalves.dev",
+  "name": "Ricardo Gonçalves",
+  "twitterHandle": "@at_riagoncalves",
+  "image": {
+    "en": "/images/thumbnail.jpg",
+    "pt": "/images/thumbnail-pt.jpg"
+  },
+  "cv": "/cv.pdf",
+  "keywords": [
+    "Ricardo Gonçalves",
+    "Software Engineer",
+    "Senior Software Engineer",
+    "Engenheiro de Software",
+    "Ruby on Rails",
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "Next.js",
+    "PostgreSQL",
+    "Docker",
+    "web development",
+    "remote engineer"
+  ]
+}
