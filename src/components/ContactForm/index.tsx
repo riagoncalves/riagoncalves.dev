@@ -30,6 +30,11 @@ export const ContactForm = () => {
           <InputField id='email' type='email' name='email' label='Email' value={formData.email} onChange={handleChange} placeholder='hello@example.com' required />
           <TextAreaField id='message' name='message' label='Message' value={formData.message} onChange={handleChange} placeholder="What's on your mind?" required rows={5} />
 
+          {status === 'invalid' && (
+            <p className='text-red-400 text-sm text-center'>
+              Please fill in your name, email and message.
+            </p>
+          )}
           {status === 'success' && (
             <p className='text-emerald-400 text-sm text-center'>
               Message sent! I&apos;ll get back to you soon.
