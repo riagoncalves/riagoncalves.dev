@@ -9,4 +9,5 @@ export interface SkillsData {
   languages: Skill[]
   databases: Skill[]
   tools: Skill[]
+  ai: Skill[]
 }

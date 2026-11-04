@@ -4,7 +4,7 @@
     "name": "PlayCatalog",
     "description": "A gaming platform to manage your game library, track progress, and discover new favorites. Combines personal collection management with social features and recommendations.",
     "technologies": ["Ruby on Rails", "PostgreSQL", "Sidekiq", "Docker", "TailwindCSS"],
-    "website": "https://playcatalog.net/",
+    "website": null,
     "github": null
   },
   {

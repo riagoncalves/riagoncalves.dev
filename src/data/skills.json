@@ -50,6 +50,23 @@
       "level": 2
     }
   ],
+  "ai": [
+    {
+      "key": "claude",
+      "name": "Claude Code",
+      "level": 3
+    },
+    {
+      "key": "copilot",
+      "name": "GitHub Copilot",
+      "level": 3
+    },
+    {
+      "key": "codex",
+      "name": "Codex",
+      "level": 3
+    }
+  ],
   "tools": [
     {
       "key": "git",

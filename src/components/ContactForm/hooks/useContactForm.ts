@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-type FormStatus = 'idle' | 'sending' | 'success' | 'error';
+type FormStatus = 'idle' | 'invalid' | 'sending' | 'success' | 'error';
 
 const encode = (data: Record<string, string>) =>
   Object.keys(data)
@@ -16,6 +16,12 @@ export const useContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setStatus('invalid');
+      return;
+    }
+
     setStatus('sending');
 
     try {
