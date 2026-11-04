@@ -29,4 +29,11 @@ export const useCategoryStyles = (): Record<string, CategoryStyle> => ({
     bg: 'hover:bg-amber-400/5',
     glow: 'hover:shadow-[0_8px_24px_rgba(251,191,36,0.2)]',
   },
+  ai: {
+    text: 'text-rose-400/70',
+    line: 'bg-rose-400/20',
+    border: 'hover:border-rose-400/50',
+    bg: 'hover:bg-rose-400/5',
+    glow: 'hover:shadow-[0_8px_24px_rgba(251,113,133,0.2)]',
+  },
 });
