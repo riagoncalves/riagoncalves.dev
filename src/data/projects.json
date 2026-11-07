@@ -1,5 +1,21 @@
 [
   {
+    "key": "cyberdeckui",
+    "name": "Cyberdeck UI",
+    "description": {
+      "en": "An open-source library of copy-paste cyberpunk UI components: neon buttons, glitch text, HUD cards, forms, menus, a command palette and more. Every component comes as plain HTML/CSS and as a typed React component, with no dependencies.",
+      "pt": "Uma biblioteca open-source de componentes de interface cyberpunk para copiar e colar: botões néon, texto com glitch, cartões HUD, formulários, menus, uma command palette e muito mais. Cada componente existe em HTML/CSS simples e como componente React tipado, sem dependências."
+    },
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "CSS"
+    ],
+    "website": "https://cyberdeck-ui.riagoncalves.dev/",
+    "github": "https://github.com/riagoncalves/cyberdeck-ui"
+  },
+  {
     "key": "playcatalog",
     "name": "PlayCatalog",
     "description": {
